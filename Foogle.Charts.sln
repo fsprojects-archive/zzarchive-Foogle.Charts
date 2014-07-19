@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Foogle.Charts", "src\Foogle.Charts\Foogle.Charts.fsproj", "{275E425D-E302-42E0-B2E1-59EAB3BF9B77}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Foogle.Charts.Tests", "tests\Foogle.Charts.Tests\Foogle.Charts.Tests.fsproj", "{AC7CE527-C0EE-4E79-AA61-9B93F6E40537}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{FEA05FCC-573E-47DF-A9C3-0E8457798815}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{12F23795-81A8-4907-87F8-C96D547286AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "content", "content", "{A7F0469C-F0D7-4DFD-9217-33F871C3ECBE}"
+	ProjectSection(SolutionItems) = preProject
+		docs\content\tutorial.fsx = docs\content\tutorial.fsx
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{275E425D-E302-42E0-B2E1-59EAB3BF9B77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{275E425D-E302-42E0-B2E1-59EAB3BF9B77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{275E425D-E302-42E0-B2E1-59EAB3BF9B77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{275E425D-E302-42E0-B2E1-59EAB3BF9B77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC7CE527-C0EE-4E79-AA61-9B93F6E40537}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC7CE527-C0EE-4E79-AA61-9B93F6E40537}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC7CE527-C0EE-4E79-AA61-9B93F6E40537}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC7CE527-C0EE-4E79-AA61-9B93F6E40537}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AC7CE527-C0EE-4E79-AA61-9B93F6E40537} = {FEA05FCC-573E-47DF-A9C3-0E8457798815}
+		{A7F0469C-F0D7-4DFD-9217-33F871C3ECBE} = {12F23795-81A8-4907-87F8-C96D547286AF}
+	EndGlobalSection
+EndGlobal

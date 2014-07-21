@@ -13,7 +13,20 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{12F23795-8
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "content", "content", "{A7F0469C-F0D7-4DFD-9217-33F871C3ECBE}"
 	ProjectSection(SolutionItems) = preProject
+		docs\content\index.fsx = docs\content\index.fsx
 		docs\content\tutorial.fsx = docs\content\tutorial.fsx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{694B5E46-E4BB-4DCC-A09C-46849872B18F}"
+	ProjectSection(SolutionItems) = preProject
+		docs\tools\generate.fsx = docs\tools\generate.fsx
+		docs\tools\templates\template.cshtml = docs\tools\templates\template.cshtml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "project", "project", "{21E41379-B3B6-4EC6-8F19-446FD5063D2C}"
+	ProjectSection(SolutionItems) = preProject
+		build.fsx = build.fsx
+		nuget\Foogle.Charts.nuspec = nuget\Foogle.Charts.nuspec
 	EndProjectSection
 EndProject
 Global
@@ -37,5 +50,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{AC7CE527-C0EE-4E79-AA61-9B93F6E40537} = {FEA05FCC-573E-47DF-A9C3-0E8457798815}
 		{A7F0469C-F0D7-4DFD-9217-33F871C3ECBE} = {12F23795-81A8-4907-87F8-C96D547286AF}
+		{694B5E46-E4BB-4DCC-A09C-46849872B18F} = {12F23795-81A8-4907-87F8-C96D547286AF}
 	EndGlobalSection
 EndGlobal

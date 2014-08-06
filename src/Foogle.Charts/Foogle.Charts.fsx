@@ -6,7 +6,7 @@ open System.Windows.Forms
 open Foogle.SimpleHttp
 open System.IO
 
-let server = ref None
+let server : HttpServer option ref = ref None
 let tempDir = Path.GetTempFileName()
 do File.Delete(tempDir)
 do Directory.CreateDirectory(tempDir) |> ignore

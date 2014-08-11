@@ -18,13 +18,12 @@ let tasks =
   [ "Work", 11; "Eat", 2; "Commute", 2
     "Watch TV", 2; "Sleep", 7 ]
 
-Chart.PieChart
-  ( tasks, label="Hours per Day", 
-    title="Daily activities" )
+Chart.PieChart(tasks, Label = "Hours per Day")
+|> Chart.WithTitle(Title = "Daily activities")
 
-Chart.PieChart
-  ( tasks, label="Hours per Day", 
-    title="Daily activities", pieHole=0.5 )
+Chart.PieChart(tasks, Label = "Hours per Day")
+|> Chart.WithTitle(Title = "Daily activities")
+|> Chart.WithPie(PieHole = 0.5)
     
 
 (**

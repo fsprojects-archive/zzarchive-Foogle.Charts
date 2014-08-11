@@ -11,16 +11,18 @@ module Foogle.Tests.FormattingTests
 open FsUnit
 open FSharp.Data
 open NUnit.Framework
-open Foogle.Internal
+open Foogle
 
 [<Test>]
 let ``Can format simple table`` () =
   let actual =
-    formatTable
-      [ [ "Country"; "Popularity "] 
-        [ "Germany"; 200 ]
-        [ "France"; 300 ]
-        [ "United States"; 400 ] ]
+    { Labels = [ "Country"; "Popularity "] 
+      Rows = 
+        [ [ "Germany"; 200 ]
+          [ "France"; 300 ]
+          [ "United States"; 400 ] ] }
+    |> Google.Formatting.formatTable
+
   let expected =
     JsonValue.Array
       [|JsonValue.Array [|JsonValue.String "Country"; JsonValue.String "Popularity "|];

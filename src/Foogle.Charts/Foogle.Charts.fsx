@@ -2,8 +2,8 @@
 #I "../../bin"
 #r "Foogle.Charts.dll"
 open Foogle
-open System.Windows.Forms
 open Foogle.SimpleHttp
+open System.Windows.Forms
 open System.IO
 
 let server : HttpServer option ref = ref None
@@ -16,10 +16,11 @@ fsi.AddPrinter(fun (chart:FoogleChart) ->
   | None -> server := Some (HttpServer.Start("http://localhost:8081/", tempDir))
   | _ -> ()
 
-  File.WriteAllText(Path.Combine(tempDir, "index.html"), Internal.chartHtml chart)
+  let googleChart = Google.CreateGoogleChart(chart)
+  File.WriteAllText(Path.Combine(tempDir, "index.html"), Google.GoogleChartHtml googleChart)
   let form = new Form(Width=800, Height=500, Visible=true)
   let web = new WebBrowser(Dock=DockStyle.Fill)
+  printfn "%s" (Google.GoogleChartHtml googleChart)
   form.Controls.Add(web) 
-  printfn "%s" (Internal.chartHtml chart)
   web.Navigate("http://localhost:8081/index.html")
   "(Foogle Chart)" )

@@ -23,7 +23,7 @@ let pop =
     "Canada", 500
     "France", 600
     "RU", 700]
-Chart.GeoChart(pop, label="Popularity")
+Chart.GeoChart(pop, Label="Popularity")
 (** 
 Another geo chart
 *)
@@ -41,8 +41,11 @@ let cities =
     "Ciampino",  38262,   11.0]
 
 Chart.GeoChart
-  ( cities, labels=("Population", "Area"), region="IT", 
-    mode=GeoChart.Markers, colorAxis=("#000000", "#ff0000"))
+  ( cities, Labels = ["Population"; "Area"], Region = "IT", 
+    DisplayMode = GeoChart.Markers )
+|> Chart.WithColorAxis(Colors = ["#ff0000"; "#0000ff"])    
+|> Chart.WithTitle("Italy")
+
 (**
 Pie charts
 *)
@@ -53,10 +56,9 @@ let tasks =
     "Watch TV", 2
     "Sleep",    7 ]
 
-Chart.PieChart
-  ( tasks, label="Hours per Day", 
-    title="Daily activities" )
+Chart.PieChart(tasks, Label="Hours per Day")
+|> Chart.WithTitle(Title = "Daily activities")
 
-Chart.PieChart
-  ( tasks, label="Hours per Day", 
-    title="Daily activities", pieHole=0.5 )
+Chart.PieChart(tasks, Label="Hours per Day")
+|> Chart.WithTitle(Title = "Daily activities")
+|> Chart.WithPie(PieHole = 0.5)

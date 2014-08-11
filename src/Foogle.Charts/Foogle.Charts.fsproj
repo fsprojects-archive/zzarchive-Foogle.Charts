@@ -50,10 +50,10 @@
   </Choose>
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
-    <Compile Include="HttpServer.fs" />
     <Compile Include="Foogle.fs" />
-    <Compile Include="Common.fs" />
+    <Compile Include="Google.fs" />
     <Compile Include="Chart.fs" />
+    <Compile Include="HttpServer.fs" />
     <None Include="packages.config" />
     <None Include="Foogle.Charts.fsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

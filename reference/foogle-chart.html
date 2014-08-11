@@ -9,6 +9,7 @@
 
     <script src="https://code.jquery.com/jquery-1.8.0.js"></script>
     <script src="https://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+    <script type='text/javascript' src='https://www.google.com/jsapi'></script>
     <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet"/>
@@ -51,15 +52,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '17', 17)" onmouseover="showTip(event, '17', 17)">
+          <code onmouseout="hideTip(event, '40', 40)" onmouseover="showTip(event, '40', 40)">
             GeoChart(...)
           </code>
-          <div class="tip" id="17">
-            <strong>Signature:</strong> (data:seq&lt;string * &#39;?20809 * &#39;?20810&gt; * labels:(string * string) option * region:string option * mode:DisplayMode option * colorAxis:(string * string) option * sizeAxis:(int * int) option) -&gt; FoogleChart<br />
-                          <strong>Type parameters:</strong> '?20809, '?20810          </div>
+          <div class="tip" id="40">
+            <strong>Signature:</strong> (data:seq&lt;string * &#39;?38031 * &#39;?38032&gt; * Labels:string list option * Region:string option * DisplayMode:DisplayMode option) -&gt; FoogleChart<br />
+                          <strong>Type parameters:</strong> '?38031, '?38032          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Chart.fs#L36-36" class="github-link">
+            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Chart.fs#L13-13" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -69,15 +70,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '19', 19)" onmouseover="showTip(event, '19', 19)">
+          <code onmouseout="hideTip(event, '41', 41)" onmouseover="showTip(event, '41', 41)">
             GeoChart(...)
           </code>
-          <div class="tip" id="19">
-            <strong>Signature:</strong> (data:seq&lt;string * &#39;?20807&gt; * label:string option * region:string option * mode:DisplayMode option * colorAxis:(string * string) option * sizeAxis:(int * int) option) -&gt; FoogleChart<br />
-                          <strong>Type parameters:</strong> '?20807          </div>
+          <div class="tip" id="41">
+            <strong>Signature:</strong> (data:seq&lt;string * &#39;?38029&gt; * Label:string option * Region:string option * DisplayMode:DisplayMode option) -&gt; FoogleChart<br />
+                          <strong>Type parameters:</strong> '?38029          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Chart.fs#L31-31" class="github-link">
+            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Chart.fs#L8-8" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -87,15 +88,90 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '20', 20)" onmouseover="showTip(event, '20', 20)">
-            PieChart(data, label, title, pieHole)
+          <code onmouseout="hideTip(event, '42', 42)" onmouseover="showTip(event, '42', 42)">
+            PieChart(data, Label, PieHole)
           </code>
-          <div class="tip" id="20">
-            <strong>Signature:</strong> (data:seq&lt;string * &#39;?20812&gt; * label:string option * title:string option * pieHole:float option) -&gt; FoogleChart<br />
-                          <strong>Type parameters:</strong> '?20812          </div>
+          <div class="tip" id="42">
+            <strong>Signature:</strong> (data:seq&lt;string * &#39;?38034&gt; * Label:string option * PieHole:float option) -&gt; FoogleChart<br />
+                          <strong>Type parameters:</strong> '?38034          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Chart.fs#L42-42" class="github-link">
+            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Chart.fs#L18-18" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '43', 43)" onmouseover="showTip(event, '43', 43)">
+            WithColorAxis(...)
+          </code>
+          <div class="tip" id="43">
+            <strong>Signature:</strong> (MinValue:float option * MaxValue:float option * Values:seq&lt;float&gt; option * Colors:seq&lt;Color&gt; option) -&gt; FoogleChart -&gt; FoogleChart<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Chart.fs#L58-58" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Specifies a mapping between color column values and colors or a gradient scale.</p>
+
+<h2>Parameters</h2>
+
+<ul>
+<li><p><code>MinValue</code> - If present, specifies a minimum value for chart color data. Color data 
+values of this value and lower will be rendered as the first color in the
+<code>colorAxis.colors</code> range.</p></li>
+<li><p><code>MaxValue</code> - If present, specifies a maximum value for chart color data. Color data 
+values of this value and higher will be rendered as the last color in the
+<code>colorAxis.colors</code> range.</p></li>
+<li><p><code>Values</code> - If present, controls how values are associated with colors. Each value is 
+associated with the corresponding color in the colorAxis.colors array. These values apply
+to the chart color data. Coloring is done according to a gradient of the values specified
+here. Not specifying a value for this option is equivalent to specifying
+<code>[minValue, maxValue]</code>.</p></li>
+<li><code>Colors</code> - Colors to assign to values in the visualization. An array of strings, where 
+each element is a color. You must have at least two values; the gradient will include all
+your values, plus calculated intermediary values, with the first color as the smallest
+value, and the last color as the highest.</li>
+</ul>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '44', 44)" onmouseover="showTip(event, '44', 44)">
+            WithPie(PieHole)
+          </code>
+          <div class="tip" id="44">
+            <strong>Signature:</strong> (PieHole:float option) -&gt; FoogleChart -&gt; FoogleChart<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Chart.fs#L33-33" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '45', 45)" onmouseover="showTip(event, '45', 45)">
+            WithTitle(Title)
+          </code>
+          <div class="tip" id="45">
+            <strong>Signature:</strong> (Title:string option) -&gt; FoogleChart -&gt; FoogleChart<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Chart.fs#L29-29" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>

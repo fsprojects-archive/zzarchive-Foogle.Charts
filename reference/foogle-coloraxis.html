@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>DisplayMode - Foogle Charts</title>
+    <title>ColorAxis - Foogle Charts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content=""/>
     <meta name="author" content="F# Data Science and Machine Learning working group"/>
@@ -40,89 +40,100 @@
 
 
 
-<h1>DisplayMode</h1>
+<h1>ColorAxis</h1>
 <div class="xmldoc">
-<p>Which type of geochart this is. The <code>DataTable</code> format must match the value specified.</p>
+<p>An object that specifies a mapping between color column values and colors or a gradient scale.</p>
 </div>
-  <h3>Union Cases</h3>
+  <h3>Record Fields</h3>
   <table class="table table-bordered member-list">
     <thead>
-      <tr><td>Union Case</td><td>Description</td></tr>
+      <tr><td>Record Field</td><td>Description</td></tr>
     </thead>
     <tbody>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '12', 12)" onmouseover="showTip(event, '12', 12)">
-            Auto
+          <code onmouseout="hideTip(event, '26', 26)" onmouseover="showTip(event, '26', 26)">
+            Colors
           </code>
-          <div class="tip" id="12">
-            <strong>Signature:</strong> <br />
+          <div class="tip" id="26">
+            <strong>Signature:</strong> seq&lt;Color&gt; option<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Foogle.fs#L89-89" class="github-link">
+            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Foogle.fs#L60-60" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Choose based on the format of the DataTable.</p>
+          <p>Colors to assign to values in the visualization. An array of strings, where 
+each element is a color. You must have at least two values; the gradient will include all 
+your values, plus calculated intermediary values, with the first color as the smallest 
+value, and the last color as the highest.</p>
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '13', 13)" onmouseover="showTip(event, '13', 13)">
-            Markers
+          <code onmouseout="hideTip(event, '27', 27)" onmouseover="showTip(event, '27', 27)">
+            MaxValue
           </code>
-          <div class="tip" id="13">
-            <strong>Signature:</strong> <br />
+          <div class="tip" id="27">
+            <strong>Signature:</strong> float option<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Foogle.fs#L85-85" class="github-link">
+            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Foogle.fs#L47-47" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Place markers on the regions.</p>
+          <p>If present, specifies a maximum value for chart color data. Color data 
+values of this value and higher will be rendered as the last color in the 
+<code>colorAxis.colors</code> range.</p>
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '14', 14)" onmouseover="showTip(event, '14', 14)">
-            Region
+          <code onmouseout="hideTip(event, '28', 28)" onmouseover="showTip(event, '28', 28)">
+            MinValue
           </code>
-          <div class="tip" id="14">
-            <strong>Signature:</strong> <br />
+          <div class="tip" id="28">
+            <strong>Signature:</strong> float option<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Foogle.fs#L83-83" class="github-link">
+            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Foogle.fs#L42-42" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Color the regions on the geochart.</p>
+          <p>If present, specifies a minimum value for chart color data. Color data 
+values of this value and lower will be rendered as the first color in the 
+<code>colorAxis.colors</code> range.</p>
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '15', 15)" onmouseover="showTip(event, '15', 15)">
-            Text
+          <code onmouseout="hideTip(event, '29', 29)" onmouseover="showTip(event, '29', 29)">
+            Values
           </code>
-          <div class="tip" id="15">
-            <strong>Signature:</strong> <br />
+          <div class="tip" id="29">
+            <strong>Signature:</strong> seq&lt;float&gt; option<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Foogle.fs#L87-87" class="github-link">
+            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Foogle.fs#L54-54" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Label the regions with text from the DataTable.</p>
+          <p>If present, controls how values are associated with colors. Each value is 
+associated with the corresponding color in the colorAxis.colors array. These values apply 
+to the chart color data. Coloring is done according to a gradient of the values specified 
+here. Not specifying a value for this option is equivalent to specifying 
+<code>[minValue, maxValue]</code>.</p>
 
         </td>
       </tr>

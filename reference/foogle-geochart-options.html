@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>DisplayMode - Foogle Charts</title>
+    <title>Options - Foogle Charts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content=""/>
     <meta name="author" content="F# Data Science and Machine Learning working group"/>
@@ -40,89 +40,60 @@
 
 
 
-<h1>DisplayMode</h1>
+<h1>Options</h1>
 <div class="xmldoc">
-<p>Which type of geochart this is. The <code>DataTable</code> format must match the value specified.</p>
+<p>Specifies additional options that are specific for the GeoChart chart type</p>
 </div>
-  <h3>Union Cases</h3>
+  <h3>Record Fields</h3>
   <table class="table table-bordered member-list">
     <thead>
-      <tr><td>Union Case</td><td>Description</td></tr>
+      <tr><td>Record Field</td><td>Description</td></tr>
     </thead>
     <tbody>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '12', 12)" onmouseover="showTip(event, '12', 12)">
-            Auto
+          <code onmouseout="hideTip(event, '30', 30)" onmouseover="showTip(event, '30', 30)">
+            DisplayMode
           </code>
-          <div class="tip" id="12">
-            <strong>Signature:</strong> <br />
+          <div class="tip" id="30">
+            <strong>Signature:</strong> DisplayMode option<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Foogle.fs#L89-89" class="github-link">
+            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Foogle.fs#L103-103" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Choose based on the format of the DataTable.</p>
+          <p>Which type of geochart this is. The <code>DataTable</code> format must match the value specified.</p>
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '13', 13)" onmouseover="showTip(event, '13', 13)">
-            Markers
-          </code>
-          <div class="tip" id="13">
-            <strong>Signature:</strong> <br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Foogle.fs#L85-85" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Place markers on the regions.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '14', 14)" onmouseover="showTip(event, '14', 14)">
+          <code onmouseout="hideTip(event, '31', 31)" onmouseover="showTip(event, '31', 31)">
             Region
           </code>
-          <div class="tip" id="14">
-            <strong>Signature:</strong> <br />
+          <div class="tip" id="31">
+            <strong>Signature:</strong> string option<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Foogle.fs#L83-83" class="github-link">
+            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Foogle.fs#L101-101" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Color the regions on the geochart.</p>
+          <p>The area to display on the geochart. (Surrounding areas will be displayed as well.) 
+Can be one of the following:</p>
 
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '15', 15)" onmouseover="showTip(event, '15', 15)">
-            Text
-          </code>
-          <div class="tip" id="15">
-            <strong>Signature:</strong> <br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Foogle.fs#L87-87" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Label the regions with text from the DataTable.</p>
+<ul>
+<li><code>"world"</code> - A geochart of the entire world.</li>
+<li>A continent or a sub-continent, specified by its 3-digit code, e.g., <code>011</code> for Western Africa.</li>
+<li>A country, specified by its ISO 3166-1 alpha-2 code, e.g., <code>AU</code> for Australia.</li>
+<li>A state in the United States, specified by its ISO 3166-2:US code, e.g., <code>US-AL</code> for Alabama. 
+Note that the resolution option must be set to either 'provinces' or 'metros'.</li>
+</ul>
 
         </td>
       </tr>

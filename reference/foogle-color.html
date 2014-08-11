@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>DisplayMode - Foogle Charts</title>
+    <title>Color - Foogle Charts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content=""/>
     <meta name="author" content="F# Data Science and Machine Learning working group"/>
@@ -40,90 +40,43 @@
 
 
 
-<h1>DisplayMode</h1>
+<h1>Color</h1>
 <div class="xmldoc">
-<p>Which type of geochart this is. The <code>DataTable</code> format must match the value specified.</p>
+<p>A color is represented as HTML string in the usual format <code>#rrggbb</code> 
+or a well-known HTML color name like <code>red</code>.</p>
 </div>
-  <h3>Union Cases</h3>
+  <h3>Instance members</h3>
   <table class="table table-bordered member-list">
     <thead>
-      <tr><td>Union Case</td><td>Description</td></tr>
+      <tr><td>Instance member</td><td>Description</td></tr>
     </thead>
     <tbody>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '12', 12)" onmouseover="showTip(event, '12', 12)">
-            Auto
+          <code onmouseout="hideTip(event, '34', 34)" onmouseover="showTip(event, '34', 34)">
+            Chars(arg1)
           </code>
-          <div class="tip" id="12">
-            <strong>Signature:</strong> <br />
+          <div class="tip" id="34">
+            <strong>Signature:</strong> int -&gt; char<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Foogle.fs#L89-89" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Choose based on the format of the DataTable.</p>
-
+          
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '13', 13)" onmouseover="showTip(event, '13', 13)">
-            Markers
+          <code onmouseout="hideTip(event, '35', 35)" onmouseover="showTip(event, '35', 35)">
+            Length()
           </code>
-          <div class="tip" id="13">
-            <strong>Signature:</strong> <br />
+          <div class="tip" id="35">
+            <strong>Signature:</strong> unit -&gt; int<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Foogle.fs#L85-85" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Place markers on the regions.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '14', 14)" onmouseover="showTip(event, '14', 14)">
-            Region
-          </code>
-          <div class="tip" id="14">
-            <strong>Signature:</strong> <br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Foogle.fs#L83-83" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Color the regions on the geochart.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '15', 15)" onmouseover="showTip(event, '15', 15)">
-            Text
-          </code>
-          <div class="tip" id="15">
-            <strong>Signature:</strong> <br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Foogle.fs#L87-87" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Label the regions with text from the DataTable.</p>
-
+          
         </td>
       </tr>
     </tbody>

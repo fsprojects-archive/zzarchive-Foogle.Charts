@@ -10,6 +10,7 @@
 
     <script src="https://code.jquery.com/jquery-1.8.0.js"></script>
     <script src="https://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+    <script type='text/javascript' src='https://www.google.com/jsapi'></script>
     <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet"/>
@@ -43,18 +44,12 @@
 Here are some pie charts:</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l"> 1: </span>
-<span class="l"> 2: </span>
-<span class="l"> 3: </span>
-<span class="l"> 4: </span>
-<span class="l"> 5: </span>
-<span class="l"> 6: </span>
-<span class="l"> 7: </span>
-<span class="l"> 8: </span>
-<span class="l"> 9: </span>
-<span class="l">10: </span>
-<span class="l">11: </span>
-<span class="l">12: </span>
+<span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+<span class="l">5: </span>
+<span class="l">6: </span>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
@@ -62,17 +57,63 @@ Here are some pie charts:</p>
   [ <span class="s">&quot;</span><span class="s">Work</span><span class="s">&quot;</span>, <span class="n">11</span>; <span class="s">&quot;</span><span class="s">Eat</span><span class="s">&quot;</span>, <span class="n">2</span>; <span class="s">&quot;</span><span class="s">Commute</span><span class="s">&quot;</span>, <span class="n">2</span>
     <span class="s">&quot;</span><span class="s">Watch</span><span class="s"> </span><span class="s">TV</span><span class="s">&quot;</span>, <span class="n">2</span>; <span class="s">&quot;</span><span class="s">Sleep</span><span class="s">&quot;</span>, <span class="n">7</span> ]
 
-<span onmouseout="hideTip(event, 'fs6', 6)" onmouseover="showTip(event, 'fs6', 6)" class="i">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs7', 7)" onmouseover="showTip(event, 'fs7', 7)" class="i">PieChart</span>
-  ( <span onmouseout="hideTip(event, 'fs5', 8)" onmouseover="showTip(event, 'fs5', 8)" class="i">tasks</span>, <span class="i">label</span><span class="o">=</span><span class="s">&quot;</span><span class="s">Hours</span><span class="s"> </span><span class="s">per</span><span class="s"> </span><span class="s">Day</span><span class="s">&quot;</span>, 
-    <span class="i">title</span><span class="o">=</span><span class="s">&quot;</span><span class="s">Daily</span><span class="s"> </span><span class="s">activities</span><span class="s">&quot;</span> )
-
-<span onmouseout="hideTip(event, 'fs6', 9)" onmouseover="showTip(event, 'fs6', 9)" class="i">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs7', 10)" onmouseover="showTip(event, 'fs7', 10)" class="i">PieChart</span>
-  ( <span onmouseout="hideTip(event, 'fs5', 11)" onmouseover="showTip(event, 'fs5', 11)" class="i">tasks</span>, <span class="i">label</span><span class="o">=</span><span class="s">&quot;</span><span class="s">Hours</span><span class="s"> </span><span class="s">per</span><span class="s"> </span><span class="s">Day</span><span class="s">&quot;</span>, 
-    <span class="i">title</span><span class="o">=</span><span class="s">&quot;</span><span class="s">Daily</span><span class="s"> </span><span class="s">activities</span><span class="s">&quot;</span>, <span class="i">pieHole</span><span class="o">=</span><span class="n">0.5</span> )
-    </pre>
+<span onmouseout="hideTip(event, 'fs6', 6)" onmouseover="showTip(event, 'fs6', 6)" class="i">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs7', 7)" onmouseover="showTip(event, 'fs7', 7)" class="i">PieChart</span>(<span onmouseout="hideTip(event, 'fs5', 8)" onmouseover="showTip(event, 'fs5', 8)" class="i">tasks</span>, <span onmouseout="hideTip(event, 'fs8', 9)" onmouseover="showTip(event, 'fs8', 9)" class="i">Label</span> <span class="o">=</span> <span class="s">&quot;</span><span class="s">Hours</span><span class="s"> </span><span class="s">per</span><span class="s"> </span><span class="s">Day</span><span class="s">&quot;</span>)
+<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs6', 10)" onmouseover="showTip(event, 'fs6', 10)" class="i">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs9', 11)" onmouseover="showTip(event, 'fs9', 11)" class="i">WithTitle</span>(<span class="i">Title</span> <span class="o">=</span> <span class="s">&quot;</span><span class="s">Daily</span><span class="s"> </span><span class="s">activities</span><span class="s">&quot;</span>)</pre>
 </td>
 </tr>
 </table>
+
+
+          <script type="text/javascript">
+            if (typeof foogleCharts === 'undefined') {
+              var foogleCharts = [];
+              function foogleInit() {
+                for (var i = 0; i < foogleCharts.length; i++) {
+                  foogleCharts[i]();
+                }
+              }
+              google.load('visualization', '1', { 'packages': ['corechart','geochart'] });
+              google.setOnLoadCallback(foogleInit);
+            }
+          </script><script type="text/javascript">foogleCharts.push(function() {
+var data = google.visualization.arrayToDataTable([["","Hours per Day"],["Work",11],["Eat",2],["Commute",2],["Watch TV",2],["Sleep",7]]);
+var options = {"title":"Daily activities"};
+var chart = new google.visualization.PieChart(document.getElementById('foogle_1'));
+chart.draw(data, options);
+});</script><div id="foogle_1" style="height:400px; margin:0px 45px 0px 25px"></div>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span onmouseout="hideTip(event, 'fs6', 12)" onmouseover="showTip(event, 'fs6', 12)" class="i">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs7', 13)" onmouseover="showTip(event, 'fs7', 13)" class="i">PieChart</span>(<span onmouseout="hideTip(event, 'fs5', 14)" onmouseover="showTip(event, 'fs5', 14)" class="i">tasks</span>, <span onmouseout="hideTip(event, 'fs8', 15)" onmouseover="showTip(event, 'fs8', 15)" class="i">Label</span> <span class="o">=</span> <span class="s">&quot;</span><span class="s">Hours</span><span class="s"> </span><span class="s">per</span><span class="s"> </span><span class="s">Day</span><span class="s">&quot;</span>)
+<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs6', 16)" onmouseover="showTip(event, 'fs6', 16)" class="i">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs9', 17)" onmouseover="showTip(event, 'fs9', 17)" class="i">WithTitle</span>(<span class="i">Title</span> <span class="o">=</span> <span class="s">&quot;</span><span class="s">Daily</span><span class="s"> </span><span class="s">activities</span><span class="s">&quot;</span>)
+<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs6', 18)" onmouseover="showTip(event, 'fs6', 18)" class="i">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs10', 19)" onmouseover="showTip(event, 'fs10', 19)" class="i">WithPie</span>(<span class="i">PieHole</span> <span class="o">=</span> <span class="n">0.5</span>)</pre>
+</td>
+</tr>
+</table>
+
+
+          <script type="text/javascript">
+            if (typeof foogleCharts === 'undefined') {
+              var foogleCharts = [];
+              function foogleInit() {
+                for (var i = 0; i < foogleCharts.length; i++) {
+                  foogleCharts[i]();
+                }
+              }
+              google.load('visualization', '1', { 'packages': ['corechart','geochart'] });
+              google.setOnLoadCallback(foogleInit);
+            }
+          </script><script type="text/javascript">foogleCharts.push(function() {
+var data = google.visualization.arrayToDataTable([["","Hours per Day"],["Work",11],["Eat",2],["Commute",2],["Watch TV",2],["Sleep",7]]);
+var options = {"pieHole":0.5,"title":"Daily activities"};
+var chart = new google.visualization.PieChart(document.getElementById('foogle_2'));
+chart.draw(data, options);
+});</script><div id="foogle_2" style="height:400px; margin:0px 45px 0px 25px"></div>
 
 <h2>Getting the library</h2>
 
@@ -107,8 +148,11 @@ redistribution for both commercial and non-commercial purposes. For more informa
 <div class="tip" id="fs3">namespace System.Windows</div>
 <div class="tip" id="fs4">namespace System.Windows.Forms</div>
 <div class="tip" id="fs5">val tasks : (string * int) list<br /><br />Full name: Index.tasks</div>
-<div class="tip" id="fs6">type Chart =<br />&#160;&#160;static member GeoChart : data:seq&lt;string * #value * #value&gt; * ?labels:(string * string) * ?region:string * ?mode:DisplayMode * ?colorAxis:(string * string) * ?sizeAxis:(int * int) -&gt; FoogleChart<br />&#160;&#160;static member GeoChart : data:seq&lt;string * #value&gt; * ?label:string * ?region:string * ?mode:DisplayMode * ?colorAxis:(string * string) * ?sizeAxis:(int * int) -&gt; FoogleChart<br />&#160;&#160;static member PieChart : data:seq&lt;string * #value&gt; * ?label:string * ?title:string * ?pieHole:float -&gt; FoogleChart<br /><br />Full name: Foogle.Chart</div>
-<div class="tip" id="fs7">static member Chart.PieChart : data:seq&lt;string * #value&gt; * ?label:string * ?title:string * ?pieHole:float -&gt; FoogleChart</div>
+<div class="tip" id="fs6">type Chart =<br />&#160;&#160;static member GeoChart : data:seq&lt;string * #value * #value&gt; * ?Labels:string list * ?Region:string * ?DisplayMode:DisplayMode -&gt; FoogleChart<br />&#160;&#160;static member GeoChart : data:seq&lt;string * #value&gt; * ?Label:string * ?Region:string * ?DisplayMode:DisplayMode -&gt; FoogleChart<br />&#160;&#160;static member PieChart : data:seq&lt;string * #value&gt; * ?Label:string * ?PieHole:float -&gt; FoogleChart<br />&#160;&#160;static member WithColorAxis : ?MinValue:float * ?MaxValue:float * ?Values:seq&lt;float&gt; * ?Colors:seq&lt;Color&gt; -&gt; (FoogleChart -&gt; FoogleChart)<br />&#160;&#160;static member WithPie : ?PieHole:float -&gt; (FoogleChart -&gt; FoogleChart)<br />&#160;&#160;static member WithTitle : ?Title:string -&gt; (FoogleChart -&gt; FoogleChart)<br /><br />Full name: Foogle.Chart</div>
+<div class="tip" id="fs7">static member Chart.PieChart : data:seq&lt;string * #value&gt; * ?Label:string * ?PieHole:float -&gt; FoogleChart</div>
+<div class="tip" id="fs8">Multiple items<br />type Label =<br />&#160;&#160;inherit Control<br />&#160;&#160;new : unit -&gt; Label<br />&#160;&#160;member AutoEllipsis : bool with get, set<br />&#160;&#160;member AutoSize : bool with get, set<br />&#160;&#160;member BackgroundImage : Image with get, set<br />&#160;&#160;member BackgroundImageLayout : ImageLayout with get, set<br />&#160;&#160;member BorderStyle : BorderStyle with get, set<br />&#160;&#160;member FlatStyle : FlatStyle with get, set<br />&#160;&#160;member GetPreferredSize : proposedSize:Size -&gt; Size<br />&#160;&#160;member Image : Image with get, set<br />&#160;&#160;member ImageAlign : ContentAlignment with get, set<br />&#160;&#160;...<br /><br />Full name: System.Windows.Forms.Label<br /><br />--------------------<br />Label() : unit</div>
+<div class="tip" id="fs9">static member Chart.WithTitle : ?Title:string -&gt; (FoogleChart -&gt; FoogleChart)</div>
+<div class="tip" id="fs10">static member Chart.WithPie : ?PieHole:float -&gt; (FoogleChart -&gt; FoogleChart)</div>
 
         </div>
         <div class="span3">

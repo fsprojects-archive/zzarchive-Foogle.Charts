@@ -60,15 +60,22 @@ type ColorAxis =
     Colors : seq<Color> option }
 
 
+/// Specifies the preferred rendering engine for the chart
+type Engine = 
+  | Google
+  | Highcharts
+
 /// Specifies common options that are shared by all Foogle charts
 type Options = 
   { /// Text to display above the chart.
     Title : string option
     /// An object that specifies a mapping between color column values and colors or a gradient scale. 
-    ColorAxis : ColorAxis option }
+    ColorAxis : ColorAxis option 
+    /// Specifies the preferred rendering engine for the chart
+    Engine : Engine option }
 
   /// Returns a default empty configuration
-  static member Empty = { Title = None; ColorAxis = None }
+  static member Empty = { Title = None; ColorAxis = None; Engine = None }
 
 
 // ------------------------------------------------------------------------------------------------

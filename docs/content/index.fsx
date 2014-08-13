@@ -14,17 +14,20 @@ This example demonstrates using a function defined in this sample library.
 Here are some pie charts:
 
 *)
+(*** define-output:pie1 ***)    
 let tasks = 
   [ "Work", 11; "Eat", 2; "Commute", 2
     "Watch TV", 2; "Sleep", 7 ]
 
 Chart.PieChart(tasks, Label = "Hours per Day")
 |> Chart.WithTitle(Title = "Daily activities")
+(*** include-it:pie1 ***)
 
+(*** define-output:pie2 ***)    
 Chart.PieChart(tasks, Label = "Hours per Day")
 |> Chart.WithTitle(Title = "Daily activities")
 |> Chart.WithPie(PieHole = 0.5)
-    
+(*** include-it:pie2 ***)    
 
 (**
 Getting the library

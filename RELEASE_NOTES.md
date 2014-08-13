@@ -6,3 +6,9 @@
 
 #### 0.0.2 - August 5 2014
 * Releasing initial non-preview version.
+
+#### 0.0.3 - August 11 2014
+* Change to more composable API design.
+
+#### 0.0.4 - August 13 2014
+* Add primitive Highcharts renderer for pie charts.

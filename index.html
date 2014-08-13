@@ -8,8 +8,9 @@
     <meta name="description" content="Foogle Charts is an easy to use F# wrapper for Google Charts visualization library"/>
     <meta name="author" content="F# Data Science and Machine Learning working group"/>
 
-    <script src="https://code.jquery.com/jquery-1.8.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
     <script type='text/javascript' src='https://www.google.com/jsapi'></script>
     <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -64,18 +65,18 @@ Here are some pie charts:</p>
 </table>
 
 
-          <script type="text/javascript">
-            if (typeof foogleCharts === 'undefined') {
-              var foogleCharts = [];
-              function foogleInit() {
-                for (var i = 0; i < foogleCharts.length; i++) {
-                  foogleCharts[i]();
+              <script type="text/javascript">
+                if (typeof foogleCharts === 'undefined') {
+                  var foogleCharts = [];
+                  function foogleInit() {
+                    for (var i = 0; i < foogleCharts.length; i++) {
+                      foogleCharts[i]();
+                    }
+                  }
+                  google.load('visualization', '1', { 'packages': ['corechart','geochart'] });
+                  google.setOnLoadCallback(foogleInit);
                 }
-              }
-              google.load('visualization', '1', { 'packages': ['corechart','geochart'] });
-              google.setOnLoadCallback(foogleInit);
-            }
-          </script><script type="text/javascript">foogleCharts.push(function() {
+              </script><script type="text/javascript">foogleCharts.push(function() {
 var data = google.visualization.arrayToDataTable([["","Hours per Day"],["Work",11],["Eat",2],["Commute",2],["Watch TV",2],["Sleep",7]]);
 var options = {"title":"Daily activities"};
 var chart = new google.visualization.PieChart(document.getElementById('foogle_1'));
@@ -97,18 +98,18 @@ chart.draw(data, options);
 </table>
 
 
-          <script type="text/javascript">
-            if (typeof foogleCharts === 'undefined') {
-              var foogleCharts = [];
-              function foogleInit() {
-                for (var i = 0; i < foogleCharts.length; i++) {
-                  foogleCharts[i]();
+              <script type="text/javascript">
+                if (typeof foogleCharts === 'undefined') {
+                  var foogleCharts = [];
+                  function foogleInit() {
+                    for (var i = 0; i < foogleCharts.length; i++) {
+                      foogleCharts[i]();
+                    }
+                  }
+                  google.load('visualization', '1', { 'packages': ['corechart','geochart'] });
+                  google.setOnLoadCallback(foogleInit);
                 }
-              }
-              google.load('visualization', '1', { 'packages': ['corechart','geochart'] });
-              google.setOnLoadCallback(foogleInit);
-            }
-          </script><script type="text/javascript">foogleCharts.push(function() {
+              </script><script type="text/javascript">foogleCharts.push(function() {
 var data = google.visualization.arrayToDataTable([["","Hours per Day"],["Work",11],["Eat",2],["Commute",2],["Watch TV",2],["Sleep",7]]);
 var options = {"pieHole":0.5,"title":"Daily activities"};
 var chart = new google.visualization.PieChart(document.getElementById('foogle_2'));
@@ -148,7 +149,7 @@ redistribution for both commercial and non-commercial purposes. For more informa
 <div class="tip" id="fs3">namespace System.Windows</div>
 <div class="tip" id="fs4">namespace System.Windows.Forms</div>
 <div class="tip" id="fs5">val tasks : (string * int) list<br /><br />Full name: Index.tasks</div>
-<div class="tip" id="fs6">type Chart =<br />&#160;&#160;static member GeoChart : data:seq&lt;string * #value * #value&gt; * ?Labels:string list * ?Region:string * ?DisplayMode:DisplayMode -&gt; FoogleChart<br />&#160;&#160;static member GeoChart : data:seq&lt;string * #value&gt; * ?Label:string * ?Region:string * ?DisplayMode:DisplayMode -&gt; FoogleChart<br />&#160;&#160;static member PieChart : data:seq&lt;string * #value&gt; * ?Label:string * ?PieHole:float -&gt; FoogleChart<br />&#160;&#160;static member WithColorAxis : ?MinValue:float * ?MaxValue:float * ?Values:seq&lt;float&gt; * ?Colors:seq&lt;Color&gt; -&gt; (FoogleChart -&gt; FoogleChart)<br />&#160;&#160;static member WithPie : ?PieHole:float -&gt; (FoogleChart -&gt; FoogleChart)<br />&#160;&#160;static member WithTitle : ?Title:string -&gt; (FoogleChart -&gt; FoogleChart)<br /><br />Full name: Foogle.Chart</div>
+<div class="tip" id="fs6">type Chart =<br />&#160;&#160;static member GeoChart : data:seq&lt;string * #value * #value&gt; * ?Labels:string list * ?Region:string * ?DisplayMode:DisplayMode -&gt; FoogleChart<br />&#160;&#160;static member GeoChart : data:seq&lt;string * #value&gt; * ?Label:string * ?Region:string * ?DisplayMode:DisplayMode -&gt; FoogleChart<br />&#160;&#160;static member PieChart : data:seq&lt;string * #value&gt; * ?Label:string * ?PieHole:float -&gt; FoogleChart<br />&#160;&#160;static member WithColorAxis : ?MinValue:float * ?MaxValue:float * ?Values:seq&lt;float&gt; * ?Colors:seq&lt;Color&gt; -&gt; (FoogleChart -&gt; FoogleChart)<br />&#160;&#160;static member WithOutput : ?Engine:Engine -&gt; (FoogleChart -&gt; FoogleChart)<br />&#160;&#160;static member WithPie : ?PieHole:float -&gt; (FoogleChart -&gt; FoogleChart)<br />&#160;&#160;static member WithTitle : ?Title:string -&gt; (FoogleChart -&gt; FoogleChart)<br /><br />Full name: Foogle.Chart</div>
 <div class="tip" id="fs7">static member Chart.PieChart : data:seq&lt;string * #value&gt; * ?Label:string * ?PieHole:float -&gt; FoogleChart</div>
 <div class="tip" id="fs8">Multiple items<br />type Label =<br />&#160;&#160;inherit Control<br />&#160;&#160;new : unit -&gt; Label<br />&#160;&#160;member AutoEllipsis : bool with get, set<br />&#160;&#160;member AutoSize : bool with get, set<br />&#160;&#160;member BackgroundImage : Image with get, set<br />&#160;&#160;member BackgroundImageLayout : ImageLayout with get, set<br />&#160;&#160;member BorderStyle : BorderStyle with get, set<br />&#160;&#160;member FlatStyle : FlatStyle with get, set<br />&#160;&#160;member GetPreferredSize : proposedSize:Size -&gt; Size<br />&#160;&#160;member Image : Image with get, set<br />&#160;&#160;member ImageAlign : ContentAlignment with get, set<br />&#160;&#160;...<br /><br />Full name: System.Windows.Forms.Label<br /><br />--------------------<br />Label() : unit</div>
 <div class="tip" id="fs9">static member Chart.WithTitle : ?Title:string -&gt; (FoogleChart -&gt; FoogleChart)</div>

@@ -8,8 +8,9 @@
     <meta name="description" content="Foogle Charts is an easy to use F# wrapper for Google Charts visualization library"/>
     <meta name="author" content="F# Data Science and Machine Learning working group"/>
 
-    <script src="https://code.jquery.com/jquery-1.8.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
     <script type='text/javascript' src='https://www.google.com/jsapi'></script>
     <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -87,18 +88,18 @@
 </table>
 
 
-          <script type="text/javascript">
-            if (typeof foogleCharts === 'undefined') {
-              var foogleCharts = [];
-              function foogleInit() {
-                for (var i = 0; i < foogleCharts.length; i++) {
-                  foogleCharts[i]();
+              <script type="text/javascript">
+                if (typeof foogleCharts === 'undefined') {
+                  var foogleCharts = [];
+                  function foogleInit() {
+                    for (var i = 0; i < foogleCharts.length; i++) {
+                      foogleCharts[i]();
+                    }
+                  }
+                  google.load('visualization', '1', { 'packages': ['corechart','geochart'] });
+                  google.setOnLoadCallback(foogleInit);
                 }
-              }
-              google.load('visualization', '1', { 'packages': ['corechart','geochart'] });
-              google.setOnLoadCallback(foogleInit);
-            }
-          </script><script type="text/javascript">foogleCharts.push(function() {
+              </script><script type="text/javascript">foogleCharts.push(function() {
 var data = google.visualization.arrayToDataTable([["","Popularity"],["Germany",200],["United States",300],["Brazil",400],["Canada",500],["France",600],["RU",700]]);
 var options = {"displayMode":"auto"};
 var chart = new google.visualization.GeoChart(document.getElementById('foogle_3'));
@@ -158,18 +159,18 @@ chart.draw(data, options);
 </table>
 
 
-          <script type="text/javascript">
-            if (typeof foogleCharts === 'undefined') {
-              var foogleCharts = [];
-              function foogleInit() {
-                for (var i = 0; i < foogleCharts.length; i++) {
-                  foogleCharts[i]();
+              <script type="text/javascript">
+                if (typeof foogleCharts === 'undefined') {
+                  var foogleCharts = [];
+                  function foogleInit() {
+                    for (var i = 0; i < foogleCharts.length; i++) {
+                      foogleCharts[i]();
+                    }
+                  }
+                  google.load('visualization', '1', { 'packages': ['corechart','geochart'] });
+                  google.setOnLoadCallback(foogleInit);
                 }
-              }
-              google.load('visualization', '1', { 'packages': ['corechart','geochart'] });
-              google.setOnLoadCallback(foogleInit);
-            }
-          </script><script type="text/javascript">foogleCharts.push(function() {
+              </script><script type="text/javascript">foogleCharts.push(function() {
 var data = google.visualization.arrayToDataTable([["","Population","Area"],["Rome",2761477,1285.31],["Milan",1324110,181.76],["Naples",959574,117.27],["Turin",907563,130.17],["Palermo",655875,158.9],["Genoa",607906,243.6],["Bologna",380181,140.7],["Florence",371282,102.41],["Fiumicino",67370,213.44],["Anzio",52192,43.43],["Ciampino",38262,11]]);
 var options = {"region":"IT","displayMode":"markers","title":"Italy","colors":["#ff0000","#0000ff"]};
 var chart = new google.visualization.GeoChart(document.getElementById('foogle_4'));
@@ -205,18 +206,18 @@ chart.draw(data, options);
 </table>
 
 
-          <script type="text/javascript">
-            if (typeof foogleCharts === 'undefined') {
-              var foogleCharts = [];
-              function foogleInit() {
-                for (var i = 0; i < foogleCharts.length; i++) {
-                  foogleCharts[i]();
+              <script type="text/javascript">
+                if (typeof foogleCharts === 'undefined') {
+                  var foogleCharts = [];
+                  function foogleInit() {
+                    for (var i = 0; i < foogleCharts.length; i++) {
+                      foogleCharts[i]();
+                    }
+                  }
+                  google.load('visualization', '1', { 'packages': ['corechart','geochart'] });
+                  google.setOnLoadCallback(foogleInit);
                 }
-              }
-              google.load('visualization', '1', { 'packages': ['corechart','geochart'] });
-              google.setOnLoadCallback(foogleInit);
-            }
-          </script><script type="text/javascript">foogleCharts.push(function() {
+              </script><script type="text/javascript">foogleCharts.push(function() {
 var data = google.visualization.arrayToDataTable([["","Hours per Day"],["Work",11],["Eat",2],["Commute",2],["Watch TV",2],["Sleep",7]]);
 var options = {"title":"Daily activities"};
 var chart = new google.visualization.PieChart(document.getElementById('foogle_5'));
@@ -238,30 +239,54 @@ chart.draw(data, options);
 </table>
 
 
-          <script type="text/javascript">
-            if (typeof foogleCharts === 'undefined') {
-              var foogleCharts = [];
-              function foogleInit() {
-                for (var i = 0; i < foogleCharts.length; i++) {
-                  foogleCharts[i]();
+              <script type="text/javascript">
+                if (typeof foogleCharts === 'undefined') {
+                  var foogleCharts = [];
+                  function foogleInit() {
+                    for (var i = 0; i < foogleCharts.length; i++) {
+                      foogleCharts[i]();
+                    }
+                  }
+                  google.load('visualization', '1', { 'packages': ['corechart','geochart'] });
+                  google.setOnLoadCallback(foogleInit);
                 }
-              }
-              google.load('visualization', '1', { 'packages': ['corechart','geochart'] });
-              google.setOnLoadCallback(foogleInit);
-            }
-          </script><script type="text/javascript">foogleCharts.push(function() {
+              </script><script type="text/javascript">foogleCharts.push(function() {
 var data = google.visualization.arrayToDataTable([["","Hours per Day"],["Work",11],["Eat",2],["Commute",2],["Watch TV",2],["Sleep",7]]);
 var options = {"pieHole":0.5,"title":"Daily activities"};
 var chart = new google.visualization.PieChart(document.getElementById('foogle_6'));
 chart.draw(data, options);
 });</script><div id="foogle_6" style="height:400px; margin:0px 45px 0px 25px"></div>
 
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span onmouseout="hideTip(event, 'fs6', 35)" onmouseover="showTip(event, 'fs6', 35)" class="i">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs15', 36)" onmouseover="showTip(event, 'fs15', 36)" class="i">PieChart</span>(<span onmouseout="hideTip(event, 'fs14', 37)" onmouseover="showTip(event, 'fs14', 37)" class="i">tasks</span>, <span onmouseout="hideTip(event, 'fs8', 38)" onmouseover="showTip(event, 'fs8', 38)" class="i">Label</span><span class="o">=</span><span class="s">&quot;</span><span class="s">Hours</span><span class="s"> </span><span class="s">per</span><span class="s"> </span><span class="s">Day</span><span class="s">&quot;</span>)
+<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs6', 39)" onmouseover="showTip(event, 'fs6', 39)" class="i">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs13', 40)" onmouseover="showTip(event, 'fs13', 40)" class="i">WithTitle</span>(<span class="i">Title</span> <span class="o">=</span> <span class="s">&quot;</span><span class="s">Daily</span><span class="s"> </span><span class="s">activities</span><span class="s">&quot;</span>)
+<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs6', 41)" onmouseover="showTip(event, 'fs6', 41)" class="i">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs17', 42)" onmouseover="showTip(event, 'fs17', 42)" class="i">WithOutput</span>(<span onmouseout="hideTip(event, 'fs18', 43)" onmouseover="showTip(event, 'fs18', 43)" class="i">Engine</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs19', 44)" onmouseover="showTip(event, 'fs19', 44)" class="i">Highcharts</span>)</pre>
+</td>
+</tr>
+</table>
+
+
+              <div id="foogle_7" style="height:400px; margin:0px 45px 0px 25px"></div>
+              <script type="text/javascript">
+                $(function () {
+                  $('#foogle_7').highcharts(
+                    {"chart":{"type":"pie"},"series":[{"name":"Hours per Day","data":[["Work",11],["Eat",2],["Commute",2],["Watch TV",2],["Sleep",7]]}],"title":{"text":"Daily activities"}}
+                  );
+                });
+              </script>
+
 <div class="tip" id="fs1">namespace Foogle</div>
 <div class="tip" id="fs2">namespace System</div>
 <div class="tip" id="fs3">namespace System.Windows</div>
 <div class="tip" id="fs4">namespace System.Windows.Forms</div>
 <div class="tip" id="fs5">val pop : (string * int) list<br /><br />Full name: Tutorial.pop</div>
-<div class="tip" id="fs6">type Chart =<br />&#160;&#160;static member GeoChart : data:seq&lt;string * #value * #value&gt; * ?Labels:string list * ?Region:string * ?DisplayMode:DisplayMode -&gt; FoogleChart<br />&#160;&#160;static member GeoChart : data:seq&lt;string * #value&gt; * ?Label:string * ?Region:string * ?DisplayMode:DisplayMode -&gt; FoogleChart<br />&#160;&#160;static member PieChart : data:seq&lt;string * #value&gt; * ?Label:string * ?PieHole:float -&gt; FoogleChart<br />&#160;&#160;static member WithColorAxis : ?MinValue:float * ?MaxValue:float * ?Values:seq&lt;float&gt; * ?Colors:seq&lt;Color&gt; -&gt; (FoogleChart -&gt; FoogleChart)<br />&#160;&#160;static member WithPie : ?PieHole:float -&gt; (FoogleChart -&gt; FoogleChart)<br />&#160;&#160;static member WithTitle : ?Title:string -&gt; (FoogleChart -&gt; FoogleChart)<br /><br />Full name: Foogle.Chart</div>
+<div class="tip" id="fs6">type Chart =<br />&#160;&#160;static member GeoChart : data:seq&lt;string * #value * #value&gt; * ?Labels:string list * ?Region:string * ?DisplayMode:DisplayMode -&gt; FoogleChart<br />&#160;&#160;static member GeoChart : data:seq&lt;string * #value&gt; * ?Label:string * ?Region:string * ?DisplayMode:DisplayMode -&gt; FoogleChart<br />&#160;&#160;static member PieChart : data:seq&lt;string * #value&gt; * ?Label:string * ?PieHole:float -&gt; FoogleChart<br />&#160;&#160;static member WithColorAxis : ?MinValue:float * ?MaxValue:float * ?Values:seq&lt;float&gt; * ?Colors:seq&lt;Color&gt; -&gt; (FoogleChart -&gt; FoogleChart)<br />&#160;&#160;static member WithOutput : ?Engine:Engine -&gt; (FoogleChart -&gt; FoogleChart)<br />&#160;&#160;static member WithPie : ?PieHole:float -&gt; (FoogleChart -&gt; FoogleChart)<br />&#160;&#160;static member WithTitle : ?Title:string -&gt; (FoogleChart -&gt; FoogleChart)<br /><br />Full name: Foogle.Chart</div>
 <div class="tip" id="fs7">static member Chart.GeoChart : data:seq&lt;string * #value * #value&gt; * ?Labels:string list * ?Region:string * ?DisplayMode:GeoChart.DisplayMode -&gt; FoogleChart<br />static member Chart.GeoChart : data:seq&lt;string * #value&gt; * ?Label:string * ?Region:string * ?DisplayMode:GeoChart.DisplayMode -&gt; FoogleChart</div>
 <div class="tip" id="fs8">Multiple items<br />type Label =<br />&#160;&#160;inherit Control<br />&#160;&#160;new : unit -&gt; Label<br />&#160;&#160;member AutoEllipsis : bool with get, set<br />&#160;&#160;member AutoSize : bool with get, set<br />&#160;&#160;member BackgroundImage : Image with get, set<br />&#160;&#160;member BackgroundImageLayout : ImageLayout with get, set<br />&#160;&#160;member BorderStyle : BorderStyle with get, set<br />&#160;&#160;member FlatStyle : FlatStyle with get, set<br />&#160;&#160;member GetPreferredSize : proposedSize:Size -&gt; Size<br />&#160;&#160;member Image : Image with get, set<br />&#160;&#160;member ImageAlign : ContentAlignment with get, set<br />&#160;&#160;...<br /><br />Full name: System.Windows.Forms.Label<br /><br />--------------------<br />Label() : unit</div>
 <div class="tip" id="fs9">val cities : (string * int * float) list<br /><br />Full name: Tutorial.cities</div>
@@ -272,6 +297,9 @@ chart.draw(data, options);
 <div class="tip" id="fs14">val tasks : (string * int) list<br /><br />Full name: Tutorial.tasks</div>
 <div class="tip" id="fs15">static member Chart.PieChart : data:seq&lt;string * #value&gt; * ?Label:string * ?PieHole:float -&gt; FoogleChart</div>
 <div class="tip" id="fs16">static member Chart.WithPie : ?PieHole:float -&gt; (FoogleChart -&gt; FoogleChart)</div>
+<div class="tip" id="fs17">static member Chart.WithOutput : ?Engine:Engine -&gt; (FoogleChart -&gt; FoogleChart)</div>
+<div class="tip" id="fs18">type Engine =<br />&#160;&#160;| Google<br />&#160;&#160;| Highcharts<br /><br />Full name: Foogle.Engine</div>
+<div class="tip" id="fs19">union case Engine.Highcharts: Engine</div>
 
         </div>
         <div class="span3">

@@ -7,8 +7,9 @@
     <meta name="description" content=""/>
     <meta name="author" content="F# Data Science and Machine Learning working group"/>
 
-    <script src="https://code.jquery.com/jquery-1.8.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
     <script type='text/javascript' src='https://www.google.com/jsapi'></script>
     <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -52,12 +53,12 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '40', 40)" onmouseover="showTip(event, '40', 40)">
+          <code onmouseout="hideTip(event, '51', 51)" onmouseover="showTip(event, '51', 51)">
             GeoChart(...)
           </code>
-          <div class="tip" id="40">
-            <strong>Signature:</strong> (data:seq&lt;string * &#39;?38031 * &#39;?38032&gt; * Labels:string list option * Region:string option * DisplayMode:DisplayMode option) -&gt; FoogleChart<br />
-                          <strong>Type parameters:</strong> '?38031, '?38032          </div>
+          <div class="tip" id="51">
+            <strong>Signature:</strong> (data:seq&lt;string * &#39;?38755 * &#39;?38756&gt; * Labels:string list option * Region:string option * DisplayMode:DisplayMode option) -&gt; FoogleChart<br />
+                          <strong>Type parameters:</strong> '?38755, '?38756          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Chart.fs#L13-13" class="github-link">
@@ -70,12 +71,12 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '41', 41)" onmouseover="showTip(event, '41', 41)">
+          <code onmouseout="hideTip(event, '52', 52)" onmouseover="showTip(event, '52', 52)">
             GeoChart(...)
           </code>
-          <div class="tip" id="41">
-            <strong>Signature:</strong> (data:seq&lt;string * &#39;?38029&gt; * Label:string option * Region:string option * DisplayMode:DisplayMode option) -&gt; FoogleChart<br />
-                          <strong>Type parameters:</strong> '?38029          </div>
+          <div class="tip" id="52">
+            <strong>Signature:</strong> (data:seq&lt;string * &#39;?38753&gt; * Label:string option * Region:string option * DisplayMode:DisplayMode option) -&gt; FoogleChart<br />
+                          <strong>Type parameters:</strong> '?38753          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Chart.fs#L8-8" class="github-link">
@@ -88,12 +89,12 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '42', 42)" onmouseover="showTip(event, '42', 42)">
+          <code onmouseout="hideTip(event, '53', 53)" onmouseover="showTip(event, '53', 53)">
             PieChart(data, Label, PieHole)
           </code>
-          <div class="tip" id="42">
-            <strong>Signature:</strong> (data:seq&lt;string * &#39;?38034&gt; * Label:string option * PieHole:float option) -&gt; FoogleChart<br />
-                          <strong>Type parameters:</strong> '?38034          </div>
+          <div class="tip" id="53">
+            <strong>Signature:</strong> (data:seq&lt;string * &#39;?38758&gt; * Label:string option * PieHole:float option) -&gt; FoogleChart<br />
+                          <strong>Type parameters:</strong> '?38758          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Chart.fs#L18-18" class="github-link">
@@ -106,15 +107,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '43', 43)" onmouseover="showTip(event, '43', 43)">
+          <code onmouseout="hideTip(event, '54', 54)" onmouseover="showTip(event, '54', 54)">
             WithColorAxis(...)
           </code>
-          <div class="tip" id="43">
+          <div class="tip" id="54">
             <strong>Signature:</strong> (MinValue:float option * MaxValue:float option * Values:seq&lt;float&gt; option * Colors:seq&lt;Color&gt; option) -&gt; FoogleChart -&gt; FoogleChart<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Chart.fs#L58-58" class="github-link">
+            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Chart.fs#L62-62" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -145,10 +146,28 @@ value, and the last color as the highest.</li>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '44', 44)" onmouseover="showTip(event, '44', 44)">
+          <code onmouseout="hideTip(event, '55', 55)" onmouseover="showTip(event, '55', 55)">
+            WithOutput(Engine)
+          </code>
+          <div class="tip" id="55">
+            <strong>Signature:</strong> (Engine:Engine option) -&gt; FoogleChart -&gt; FoogleChart<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Chart.fs#L37-37" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '56', 56)" onmouseover="showTip(event, '56', 56)">
             WithPie(PieHole)
           </code>
-          <div class="tip" id="44">
+          <div class="tip" id="56">
             <strong>Signature:</strong> (PieHole:float option) -&gt; FoogleChart -&gt; FoogleChart<br />
                       </div>
         </td>
@@ -163,10 +182,10 @@ value, and the last color as the highest.</li>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '45', 45)" onmouseover="showTip(event, '45', 45)">
+          <code onmouseout="hideTip(event, '57', 57)" onmouseover="showTip(event, '57', 57)">
             WithTitle(Title)
           </code>
-          <div class="tip" id="45">
+          <div class="tip" id="57">
             <strong>Signature:</strong> (Title:string option) -&gt; FoogleChart -&gt; FoogleChart<br />
                       </div>
         </td>

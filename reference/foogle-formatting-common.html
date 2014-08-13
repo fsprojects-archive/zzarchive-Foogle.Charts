@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Common - Foogle Charts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="author" content="F# Data Science and Machine Learning working group"/>
+
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+    <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet"/>
+
+    <link type="text/css" rel="stylesheet" href="/Foogle.Charts/content/style.css" />
+    <script type="text/javascript" src="/Foogle.Charts/content/tips.js"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li><a href="http://fsharp.org">fsharp.org</a></li>
+          <li><a href="http://bluemountaincapital.github.io/Deedle"><img height="16" width="16" src="http://fsharp.org/images/thumbs/Deedle.png" /> Deedle</a></li>
+          <li><a href="http://bluemountaincapital.github.io/FSharpRProvider"><img height=" 16" width="16" src="http://fsharp.org/images/thumbs/FSharpRProvider.png" /> R Provider</a></li>
+          <li><a href="http://fsharp.github.io/FSharp.Data"><img height="16" width="16" src="http://fsharp.org/images/thumbs/FSharp.Data.png" /> F# Data</a></li>
+          <li><a href="http://fsprojects.github.io/FSharp.Data.Toolbox"><img height="16" width="16" src="http://fsharp.org/images/thumbs/FSharp.Data.Toolbox.png" /> F# Data Toolbox</a></li>
+        </ul>
+        <h3 class="muted"><a href="/Foogle.Charts/index.html">Foogle Charts</a></h3>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="span9" id="main">
+          
+
+
+
+<h1>Common</h1>
+<div class="xmldoc">
+</div>
+
+<!-- Render nested types and modules, if there are any -->
+
+  <h3>Functions and values</h3>
+  <table class="table table-bordered member-list">
+    <thead>
+      <tr><td>Function or value</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1', 1)" onmouseover="showTip(event, '1', 1)">
+            formatDefStr k def v
+          </code>
+          <div class="tip" id="1">
+            <strong>Signature:</strong> k:&#39;?38904 -&gt; def:string -&gt; v:string option -&gt; (&#39;?38904 * (type)) list<br />
+                          <strong>Type parameters:</strong> '?38904          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Formatting.fs#L14-14" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '2', 2)" onmouseover="showTip(event, '2', 2)">
+            formatDefUnionLo k def case
+          </code>
+          <div class="tip" id="2">
+            <strong>Signature:</strong> k:&#39;?38913 -&gt; def:string -&gt; case:&#39;T option -&gt; (&#39;?38913 * (type)) list<br />
+                          <strong>Type parameters:</strong> '?38913, 'T          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Formatting.fs#L23-23" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3', 3)" onmouseover="showTip(event, '3', 3)">
+            formatOpt f _arg1
+          </code>
+          <div class="tip" id="3">
+            <strong>Signature:</strong> f:(&#39;?38896 -&gt; &#39;?38897 list) -&gt; _arg1:&#39;?38896 option -&gt; &#39;?38897 list<br />
+                          <strong>Type parameters:</strong> '?38896, '?38897          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Formatting.fs#L11-11" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '4', 4)" onmouseover="showTip(event, '4', 4)">
+            formatOptNum k
+          </code>
+          <div class="tip" id="4">
+            <strong>Signature:</strong> k:&#39;?38901 -&gt; ^?38902 option -&gt; (&#39;?38901 * (type)) list<br />
+                          <strong>Type parameters:</strong> '?38901, ^?38902          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Formatting.fs#L13-13" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '5', 5)" onmouseover="showTip(event, '5', 5)">
+            formatOptRecd k f _arg1
+          </code>
+          <div class="tip" id="5">
+            <strong>Signature:</strong> k:&#39;?38908 -&gt; f:(&#39;?38909 -&gt; (string * (type)) list) -&gt; _arg1:&#39;?38909 option -&gt; (&#39;?38908 * (type)) list<br />
+                          <strong>Type parameters:</strong> '?38908, '?38909          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Formatting.fs#L17-17" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '6', 6)" onmouseover="showTip(event, '6', 6)">
+            formatOptStr k
+          </code>
+          <div class="tip" id="6">
+            <strong>Signature:</strong> k:&#39;?38899 -&gt; string option -&gt; (&#39;?38899 * (type)) list<br />
+                          <strong>Type parameters:</strong> '?38899          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Formatting.fs#L12-12" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '7', 7)" onmouseover="showTip(event, '7', 7)">
+            formatRecd k l
+          </code>
+          <div class="tip" id="7">
+            <strong>Signature:</strong> k:&#39;?38906 -&gt; l:(string * (type)) list -&gt; (&#39;?38906 * (type)) list<br />
+                          <strong>Type parameters:</strong> '?38906          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Formatting.fs#L16-16" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '8', 8)" onmouseover="showTip(event, '8', 8)">
+            formatTable table
+          </code>
+          <div class="tip" id="8">
+            <strong>Signature:</strong> table:Table -&gt; (type)<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Formatting.fs#L37-37" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Format table as a list of lists of values</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '9', 9)" onmouseover="showTip(event, '9', 9)">
+            formatTableData table
+          </code>
+          <div class="tip" id="9">
+            <strong>Signature:</strong> table:Table -&gt; (type)<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Formatting.fs#L46-46" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Format table as a list of lists of values, ignoring the header</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '10', 10)" onmouseover="showTip(event, '10', 10)">
+            formatUnion case
+          </code>
+          <div class="tip" id="10">
+            <strong>Signature:</strong> case:&#39;T -&gt; string<br />
+                          <strong>Type parameters:</strong> 'T          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Formatting.fs#L19-19" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '11', 11)" onmouseover="showTip(event, '11', 11)">
+            formatValue v
+          </code>
+          <div class="tip" id="11">
+            <strong>Signature:</strong> v:obj -&gt; (type)<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Formatting.fs#L29-29" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Format value in a JavaScript-friendly way</p>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+        </div>
+        <div class="span3">
+          <a href="/Foogle.Charts/index.html">
+            <img src="/Foogle.Charts/img/logo.png" style="width:140px;height:140px;margin:10px 0px 0px 35px;border-style:none;" />
+          </a>
+
+          <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
+            <li class="nav-header">Foogle Charts</li>
+            <li><a href="/Foogle.Charts/index.html">Home page</a></li>
+            <li class="divider"></li>
+            <li><a href="http://nuget.com/packages/Foogle.Charts">Get Library via NuGet</a></li>
+            <li><a href="http://github.com/fsprojects/Foogle.Charts">Source Code on GitHub</a></li>
+            <li><a href="http://github.com/fsprojects/Foogle.Charts/blob/master/LICENSE.txt">License</a></li>
+            <li><a href="http://github.com/fsprojects/Foogle.Charts/blob/master/RELEASE_NOTES.md">Release Notes</a></li>
+            
+            <li class="nav-header">Getting started</li>
+            <li><a href="/Foogle.Charts/tutorial.html">Sample tutorial</a></li>
+
+            <li class="nav-header">Documentation</li>
+            <li><a href="/Foogle.Charts/reference/index.html">API Reference</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <a href="http://github.com/fsprojects/Foogle.Charts"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"/></a>
+  </body>
+  </html>

@@ -34,6 +34,10 @@ type Chart with
     fun (fc:FoogleChart) -> 
       { fc with Chart = match fc.Chart with PieChart pc -> PieChart { pc with PieHole = PieHole } | _ -> invalidOp "WithPie only works on pie charts" }
 
+  static member WithOutput(?Engine) = 
+    fun (fc:FoogleChart) -> 
+      { fc with Options = { fc.Options with Engine = Engine } }
+
   /// Specifies a mapping between color column values and colors or a gradient scale. 
   ///
   /// ## Parameters

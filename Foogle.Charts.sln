@@ -19,6 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "content", "content", "{A7F0
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{694B5E46-E4BB-4DCC-A09C-46849872B18F}"
 	ProjectSection(SolutionItems) = preProject
+		docs\tools\formatters.fsx = docs\tools\formatters.fsx
 		docs\tools\generate.fsx = docs\tools\generate.fsx
 		docs\tools\templates\template.cshtml = docs\tools\templates\template.cshtml
 	EndProjectSection

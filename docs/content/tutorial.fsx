@@ -16,6 +16,7 @@ open System.Windows.Forms
 (** 
 Geo chart
 *)
+(*** define-output:geo1 ***)
 let pop =
   [ "Germany", 200
     "United States", 300
@@ -24,6 +25,8 @@ let pop =
     "France", 600
     "RU", 700]
 Chart.GeoChart(pop, Label="Popularity")
+(*** include-it:geo1 ***)
+
 (** 
 Another geo chart
 *)
@@ -40,15 +43,18 @@ let cities =
     "Anzio",     52192,   43.43
     "Ciampino",  38262,   11.0]
 
+(*** define-output:geo2 ***)
 Chart.GeoChart
   ( cities, Labels = ["Population"; "Area"], Region = "IT", 
     DisplayMode = GeoChart.Markers )
 |> Chart.WithColorAxis(Colors = ["#ff0000"; "#0000ff"])    
 |> Chart.WithTitle("Italy")
+(*** include-it:geo2 ***)
 
 (**
 Pie charts
 *)
+(*** define-output:pie1 ***)
 let tasks = 
   [ "Work",     11
     "Eat",      2
@@ -58,7 +64,16 @@ let tasks =
 
 Chart.PieChart(tasks, Label="Hours per Day")
 |> Chart.WithTitle(Title = "Daily activities")
+(*** include-it:pie1 ***)
 
+(*** define-output:pie2 ***)
 Chart.PieChart(tasks, Label="Hours per Day")
 |> Chart.WithTitle(Title = "Daily activities")
 |> Chart.WithPie(PieHole = 0.5)
+(*** include-it:pie2 ***)
+
+(*** define-output:pie3 ***)
+Chart.PieChart(tasks, Label="Hours per Day")
+|> Chart.WithTitle(Title = "Daily activities")
+|> Chart.WithOutput(Engine.Highcharts)
+(*** include-it:pie3 ***)

@@ -21,7 +21,7 @@ let ``Can format simple table`` () =
         [ [ "Germany"; 200 ]
           [ "France"; 300 ]
           [ "United States"; 400 ] ] }
-    |> Google.Formatting.formatTable
+    |> Formatting.Common.formatTable
 
   let expected =
     JsonValue.Array

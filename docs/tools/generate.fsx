@@ -16,7 +16,7 @@ let info =
     "project-author", "F# Data Science and Machine Learning working group"
     "project-summary", "Foogle Charts is an easy to use F# wrapper for Google Charts visualization library"
     "project-github", githubLink
-    "project-nuget", "http://nuget.com/packages/Foogle.Charts" ]
+    "project-nuget", "http://nuget.org/packages/Foogle.Charts" ]
 
 // --------------------------------------------------------------------------------------
 // For typical project, no changes are needed below

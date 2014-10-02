@@ -25,6 +25,10 @@ module internal Table =
     { Labels = "" :: (defaultArg labels [ "Value 1"; "Value 2" ])
       Rows = values |> Seq.map (fun (k, v1, v2) -> [box k; box v1; box v2]) }
 
+  let from2Key2Values labels (values:seq<string * string * #value * #value>) = 
+    { Labels = (defaultArg labels ["Position"; "Name"; "Start"; "End"])
+      Rows = values |> Seq.map (fun (k, k1, v1, v2) -> [box k; box k1; box v1; box v2]) }
+
 
 // ------------------------------------------------------------------------------------------------
 // Foogle chart options
@@ -119,10 +123,21 @@ module PieChart =
       PieHole : float option }
 
 
+/// Specifies additional options that are specific for the PieChart chart type
+module TimeLine = 
+  /// Specifies additional options that are specific for the GeoChart chart type
+  type Options = 
+    { /// If set to false, omits row labels. The default is to show them.
+      ShowRowLabels : bool option
+      ///If set to false, omits bar labels. The default is to show them.
+      ShowBarLabels : bool option
+       }
+
 //// Specifies the chart kind and chart-specific options
 type ChartKind = 
   | GeoChart of GeoChart.Options
   | PieChart of PieChart.Options
+  | Timeline of TimeLine.Options
 
 // ------------------------------------------------------------------------------------------------
 // Foogle chart data type - in the top-level namespace

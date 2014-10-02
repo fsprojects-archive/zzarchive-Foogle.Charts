@@ -29,7 +29,7 @@ let private PageTemplate = """<!DOCTYPE html>
       function main() {
         [SCRIPT]
       }
-      google.load('visualization', '1', { 'packages': ['corechart','geochart'] });
+      google.load('visualization', '1', { 'packages': ['corechart','geochart', 'timeline'] });
       google.setOnLoadCallback(main);
     </script>
   </body>
@@ -44,7 +44,9 @@ let CreateGoogleChart (chart:FoogleChart) =
           yield! formatDefUnionLo "displayMode" "auto" g.DisplayMode
       | PieChart(p) ->
           yield! formatOptNum "pieHole" p.PieHole
-      
+      | Timeline(t) -> 
+          yield! formatOptBool "showRowLabels" t.ShowRowLabels
+          yield! formatOptBool "showBarLabels" t.ShowBarLabels
       // Format common chart options
       let opts = chart.Options
       yield! formatOptStr "title" opts.Title

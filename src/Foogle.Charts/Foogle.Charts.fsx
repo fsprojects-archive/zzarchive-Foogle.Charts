@@ -14,7 +14,7 @@ do Directory.CreateDirectory(tempDir) |> ignore
 
 fsi.AddPrinter(fun (chart:FoogleChart) ->
   match !server with 
-  | None -> server := Some (HttpServer.Start("http://localhost:8081/", tempDir))
+  | None -> server := Some (HttpServer.Start("http://localhost:9098/", tempDir))
   | _ -> ()
 
   match chart.Options.Engine with
@@ -31,5 +31,5 @@ fsi.AddPrinter(fun (chart:FoogleChart) ->
   let form = new Form(Width=800, Height=500, Visible=true)
   let web = new WebBrowser(Dock=DockStyle.Fill)
   form.Controls.Add(web) 
-  web.Navigate("http://localhost:8081/index.html")
+  web.Navigate("http://localhost:9098/index.html")
   "(Foogle Chart)" )

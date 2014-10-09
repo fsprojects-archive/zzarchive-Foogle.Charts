@@ -20,6 +20,11 @@ type Chart =
       Options = Options.Empty
       Chart = PieChart { PieChart.PieHole = PieHole } }
 
+  static member AreaChart(data, labels, ?IsStacked) = 
+    { Data = Table.fromKeySeq labels data
+      Options = Options.Empty
+      Chart = AreaChart { AreaChart.IsStacked = IsStacked} }
+
 
 // ------------------------------------------------------------------------------------------------
 // Extensions that provide functional access to configuration via pipelining

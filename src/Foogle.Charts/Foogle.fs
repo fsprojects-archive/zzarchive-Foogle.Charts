@@ -16,6 +16,11 @@ type Table =
 /// Various helper functions for creating `Table` from sequences of inputs
 [<CompilationRepresentation(CompilationRepresentationFlags.ModuleSuffix)>]
 module internal Table = 
+  open System.Collections.Generic
+
+  let fromKeySeq labels (values: seq<string * #seq<#value>>) =
+    { Labels = "" :: labels
+      Rows = values |> Seq.map (fun (k, v) -> box k :: (v |> Seq.map box |> Seq.toList)) }
 
   let fromKeyValue label (values:seq<string * #value>) = 
     { Labels = [""; defaultArg label "Value" ]
@@ -118,11 +123,20 @@ module PieChart =
       /// number times the radius of the chart.
       PieHole : float option }
 
+/// Specifies additional options that are specific for the AreaChart chart type
+module AreaChart =
+  /// Specifies additional options that are specific for the GeoChart chart type
+  type Options = 
+    { 
+      /// If set to true, stacks the elements in a series.
+      IsStacked : bool option }
+
 
 //// Specifies the chart kind and chart-specific options
 type ChartKind = 
   | GeoChart of GeoChart.Options
   | PieChart of PieChart.Options
+  | AreaChart of AreaChart.Options
 
 // ------------------------------------------------------------------------------------------------
 // Foogle chart data type - in the top-level namespace

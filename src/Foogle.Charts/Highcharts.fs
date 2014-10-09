@@ -40,6 +40,8 @@ let CreateHighchartsChart (chart:FoogleChart) =
   let options = 
    [| // Format specific chart options
       match chart.Chart with
+      | AreaChart(g) ->
+          failwith "TODO: Implement AreaChart?"
       | GeoChart(g) ->
           failwith "TODO: Do highcharts support geo?"
       | PieChart(p) ->

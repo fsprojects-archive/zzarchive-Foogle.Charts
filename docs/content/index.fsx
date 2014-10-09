@@ -11,7 +11,7 @@ Foogle: F# Library for Google Charts
 ====================================
 
 This example demonstrates using a function defined in this sample library.
-Here are some pie charts:
+Here are some charts:
 
 *)
 (*** define-output:pie1 ***)    
@@ -28,6 +28,20 @@ Chart.PieChart(tasks, Label = "Hours per Day")
 |> Chart.WithTitle(Title = "Daily activities")
 |> Chart.WithPie(PieHole = 0.5)
 (*** include-it:pie2 ***)    
+
+(*** define-output:area1 ***)
+let data = 
+    [| 
+        ("2004", [| 1000; 400 ; 200 |])
+        ("2005", [| 1170; 460 ; 400 |])
+        ("2006", [| 660 ; 1120; 600 |])
+        ("2007", [| 1030; 540 ; 800 |])
+    |]
+
+Chart.AreaChart (data, ["Sales"; "Expenses"; "People"], IsStacked = false)
+|> Chart.WithTitle ("Company Performance")
+(*** include-it:area1 ***)
+
 
 (**
 Getting the library
@@ -60,9 +74,9 @@ The library is available under Public Domain license, which allows modification 
 redistribution for both commercial and non-commercial purposes. For more information see the 
 [License file][license] in the GitHub repository. 
 
-  [content]: https://github.com/fsprojects/FSharp.ProjectScaffold/tree/master/docs/content
-  [gh]: https://github.com/fsprojects/FSharp.ProjectScaffold
-  [issues]: https://github.com/fsprojects/FSharp.ProjectScaffold/issues
-  [readme]: https://github.com/fsprojects/FSharp.ProjectScaffold/blob/master/README.md
-  [license]: https://github.com/fsprojects/FSharp.ProjectScaffold/blob/master/LICENSE.txt
+  [content]: https://github.com/fsprojects/Foogle.Charts/tree/master/docs/content
+  [gh]: https://github.com/fsprojects/Foogle.Charts
+  [issues]: https://github.com/fsprojects/Foogle.Charts/issues
+  [readme]: https://github.com/fsprojects/Foogle.Charts/blob/master/README.md
+  [license]: https://github.com/fsprojects/Foogle.Charts/blob/master/LICENSE.txt
 *)

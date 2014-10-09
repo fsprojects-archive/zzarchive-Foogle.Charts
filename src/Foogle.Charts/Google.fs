@@ -39,6 +39,8 @@ let CreateGoogleChart (chart:FoogleChart) =
   let options = 
    [| // Format specific chart options
       match chart.Chart with
+      | AreaChart(g) ->
+          yield! formatOptBool "isStacked" g.IsStacked
       | GeoChart(g) ->
           yield! formatOptStr "region" g.Region 
           yield! formatDefUnionLo "displayMode" "auto" g.DisplayMode

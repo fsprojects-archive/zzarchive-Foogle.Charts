@@ -55,7 +55,7 @@ Chart.BarChart (data, ["Sales"; "Expenses"; "People"], IsStacked = true)
 (*** define-output:line1 ***)
 Chart.LineChart (data, ["Sales"; "Expenses"; "People"], CurveType = LineChart.Function)
 |> Chart.WithTitle ("Company Performance")
-(*** define-output:line1 ***)
+(*** include-it:line1 ***)
 
 (*** define-output:line2 ***)
 Chart.LineChart (data, ["Sales"; "Expenses"; "People"], PointShape = LineChart.PointShape.Diamond, PointSize = 10)

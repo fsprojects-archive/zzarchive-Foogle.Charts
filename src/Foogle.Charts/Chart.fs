@@ -30,6 +30,11 @@ type Chart =
       Options = Options.Empty
       Chart = BarChart { BarChart.IsStacked = IsStacked; BarChart.Colors = Colors; BarChart.Orientation = Orientation } }
 
+  static member LineChart(data, labels, ?CurveType, ?Colors, ?PointShape, ?PointSize) = 
+    { Data = Table.fromKeySeq labels data
+      Options = Options.Empty
+      Chart = LineChart { LineChart.Colors = Colors; LineChart.CurveType = CurveType; LineChart.PointShape = PointShape; LineChart.PointSize = PointSize } }
+
 
 // ------------------------------------------------------------------------------------------------
 // Extensions that provide functional access to configuration via pipelining

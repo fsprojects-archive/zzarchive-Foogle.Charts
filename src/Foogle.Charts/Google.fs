@@ -45,7 +45,11 @@ let CreateGoogleChart (chart:FoogleChart) =
           yield! formatOptBool "isStacked" g.IsStacked
           yield! formatDefUnionLo "displayMode" "horizontal" g.Orientation
           yield! formatOptStrArray "colors" g.Colors
-          
+      | LineChart(g) ->
+          yield! formatOptStrArray "colors" g.Colors
+          yield! formatDefUnionLo "curveType" "none" g.CurveType
+          yield! formatDefUnionLo "pointShape" "circle" g.PointShape
+          yield! formatOptNum "pointSize" g.PointSize
       | GeoChart(g) ->
           yield! formatOptStr "region" g.Region 
           yield! formatDefUnionLo "displayMode" "auto" g.DisplayMode

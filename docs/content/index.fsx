@@ -52,6 +52,16 @@ Chart.BarChart (data, ["Sales"; "Expenses"; "People"], IsStacked = true)
 |> Chart.WithTitle ("Company Performance")
 (*** include-it:bar2 ***)
 
+(*** define-output:line1 ***)
+Chart.LineChart (data, ["Sales"; "Expenses"; "People"], CurveType = LineChart.Function)
+|> Chart.WithTitle ("Company Performance")
+(*** define-output:line1 ***)
+
+(*** define-output:line2 ***)
+Chart.LineChart (data, ["Sales"; "Expenses"; "People"], PointShape = LineChart.PointShape.Diamond, PointSize = 10)
+|> Chart.WithTitle ("Company Performance")
+(*** include-it:line2 ***)
+
 (**
 Getting the library
 -------------------

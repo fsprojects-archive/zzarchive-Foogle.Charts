@@ -148,6 +148,34 @@ module BarChart =
       /// The orientation of the chart. When set to 'vertical', rotates the axes of the chart so that (for instance) a column chart becomes a bar chart, and an area chart grows rightward instead of up:
       Orientation: Orientation option }
 
+/// Specifies additional options that are specific for the LineChart chart type
+module LineChart =
+
+  type CurveType =
+    | None
+    | Function
+
+  type PointShape = 
+    | Circle
+    | Triangle
+    | Square
+    | Diamond
+    | Star
+    | Polygon
+
+  /// Specifies additional options that are specific for the LineChart chart type
+  type Options = 
+    { 
+      /// The colors to use for the chart elements. An array of strings, where each element is an HTML color string, for example: colors:['red','#004411'].
+      Colors: string array option 
+      /// Controls the curve of the lines when the line width is not zero. Can be one of the following:
+      /// 'none' - Straight lines without curve.
+      /// 'function' - The angles of the line will be smoothed.
+      CurveType: CurveType option
+      /// The shape of individual data elements: 'circle', 'triangle', 'square', 'diamond', 'star', or 'polygon'.
+      PointShape: PointShape option
+      /// Diameter of displayed points in pixels. Use zero to hide all points. You can override values for individual series using the series property.
+      PointSize: int option }
 
 
 //// Specifies the chart kind and chart-specific options
@@ -156,6 +184,7 @@ type ChartKind =
   | PieChart of PieChart.Options
   | AreaChart of AreaChart.Options
   | BarChart of BarChart.Options
+  | LineChart of LineChart.Options
 
 // ------------------------------------------------------------------------------------------------
 // Foogle chart data type - in the top-level namespace

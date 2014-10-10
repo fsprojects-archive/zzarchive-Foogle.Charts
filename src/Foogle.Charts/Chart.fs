@@ -25,6 +25,11 @@ type Chart =
       Options = Options.Empty
       Chart = AreaChart { AreaChart.IsStacked = IsStacked} }
 
+  static member BarChart(data, labels, ?IsStacked, ?Colors, ?Orientation) = 
+    { Data = Table.fromKeySeq labels data
+      Options = Options.Empty
+      Chart = BarChart { BarChart.IsStacked = IsStacked; BarChart.Colors = Colors; BarChart.Orientation = Orientation } }
+
 
 // ------------------------------------------------------------------------------------------------
 // Extensions that provide functional access to configuration via pipelining

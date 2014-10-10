@@ -42,6 +42,15 @@ Chart.AreaChart (data, ["Sales"; "Expenses"; "People"], IsStacked = false)
 |> Chart.WithTitle ("Company Performance")
 (*** include-it:area1 ***)
 
+(*** define-output:bar1 ***)
+Chart.BarChart (data, ["Sales"; "Expenses"; "People"], Colors = [| "red"; "green"; "blue" |])
+|> Chart.WithTitle ("Company Performance")
+(*** include-it:bar1 ***)
+
+(*** define-output:bar2 ***)
+Chart.BarChart (data, ["Sales"; "Expenses"; "People"], IsStacked = true)
+|> Chart.WithTitle ("Company Performance")
+(*** include-it:bar2 ***)
 
 (**
 Getting the library

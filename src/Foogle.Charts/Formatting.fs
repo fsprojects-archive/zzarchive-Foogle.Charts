@@ -11,6 +11,7 @@ open Microsoft.FSharp.Reflection
 let formatOpt f = function Some v -> f v | _ -> [] 
 let formatOptStr k = formatOpt (fun v -> [ k, JsonValue.String v ])
 let formatOptBool k = formatOpt (fun v -> [ k, JsonValue.Boolean v ])
+let formatOptStrArray k = formatOpt (fun v -> [ k, v |> Array.map JsonValue.String |> JsonValue.Array ])
 let inline formatOptNum k = formatOpt (fun v -> [ k, JsonValue.Number (decimal v) ])
 let formatDefStr k def v = [ k, JsonValue.String (defaultArg v def) ]
 

@@ -9,12 +9,13 @@ open System.IO
 
 let server : HttpServer option ref = ref None
 let tempDir = Path.GetTempFileName()
+let serverPath = "http://localhost:8081/" // replace 8081 with different non-used port
 do File.Delete(tempDir)
 do Directory.CreateDirectory(tempDir) |> ignore
 
 fsi.AddPrinter(fun (chart:FoogleChart) ->
   match !server with 
-  | None -> server := Some (HttpServer.Start("http://localhost:8081/", tempDir))
+  | None -> server := Some (HttpServer.Start(serverPath, tempDir))
   | _ -> ()
 
   match chart.Options.Engine with
@@ -31,5 +32,5 @@ fsi.AddPrinter(fun (chart:FoogleChart) ->
   let form = new Form(Width=800, Height=500, Visible=true)
   let web = new WebBrowser(Dock=DockStyle.Fill)
   form.Controls.Add(web) 
-  web.Navigate("http://localhost:8081/index.html")
+  web.Navigate(serverPath + "index.html")
   "(Foogle Chart)" )

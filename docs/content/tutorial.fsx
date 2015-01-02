@@ -77,3 +77,18 @@ Chart.PieChart(tasks, Label="Hours per Day")
 |> Chart.WithTitle(Title = "Daily activities")
 |> Chart.WithOutput(Engine.Highcharts)
 (*** include-it:pie3 ***)
+
+(**
+Another Pie Chart - How Much Pizza I Ate Last Night - https://google-developers.appspot.com/chart/interactive/docs/quick_start
+**)
+
+let pizzaEaten = 
+  [ "Mushrooms",    3
+    "Onines",       1
+    "Olives",       1
+    "Zucchini",     1
+    "Pepperoni",    2 ]
+
+Chart.PieChart(pizzaEaten, Label="# of slices")
+|> Chart.WithTitle(Title = "How Much Pizza I Ate Last Night")
+|> Chart.WithOutput(Engine.Google)

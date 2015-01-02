@@ -2,8 +2,8 @@
 #I "../../bin"
 
 (**
-Tutorial
-========
+# Tutorial
+
 
 Reference
 *)
@@ -14,7 +14,7 @@ open Foogle
 open System.Windows.Forms
 
 (** 
-Geo chart
+## Geo chart
 *)
 (*** define-output:geo1 ***)
 let pop =
@@ -28,7 +28,7 @@ Chart.GeoChart(pop, Label="Popularity")
 (*** include-it:geo1 ***)
 
 (** 
-Another geo chart
+## Another geo chart
 *)
 let cities = 
   [ "Rome",      2761477, 1285.31
@@ -52,7 +52,7 @@ Chart.GeoChart
 (*** include-it:geo2 ***)
 
 (**
-Pie charts
+## Pie charts
 *)
 (*** define-output:pie1 ***)
 let tasks = 
@@ -79,8 +79,11 @@ Chart.PieChart(tasks, Label="Hours per Day")
 (*** include-it:pie3 ***)
 
 (**
-Another Pie Chart - How Much Pizza I Ate Last Night - https://google-developers.appspot.com/chart/interactive/docs/quick_start
+## Another Pie Chart
+
+[How Much Pizza I Ate Last Night](https://google-developers.appspot.com/chart/interactive/docs/quick_start)
 **)
+
 
 let pizzaEaten = 
   [ "Mushrooms",    3
@@ -89,6 +92,8 @@ let pizzaEaten =
     "Zucchini",     1
     "Pepperoni",    2 ]
 
+(*** define-output:pizza ***)
 Chart.PieChart(pizzaEaten, Label="# of slices")
 |> Chart.WithTitle(Title = "How Much Pizza I Ate Last Night")
 |> Chart.WithOutput(Engine.Google)
+(*** include-it:pizza ***)

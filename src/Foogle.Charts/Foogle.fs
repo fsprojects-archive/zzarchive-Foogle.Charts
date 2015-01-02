@@ -62,7 +62,10 @@ type ColorAxis =
 
 /// Specifies the preferred rendering engine for the chart
 type Engine = 
+  /// use Google rendering engine
   | Google
+
+  /// use HighCharts rendering engine
   | Highcharts
 
 /// Specifies common options that are shared by all Foogle charts

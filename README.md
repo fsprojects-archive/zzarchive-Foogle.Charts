@@ -1,4 +1,7 @@
-Foogle Charts
+[![Issue Stats](http://issuestats.com/github/fsprojects/Foogle.Charts/badge/issue)](http://issuestats.com/github/fsprojects/Foogle.Charts)
+[![Issue Stats](http://issuestats.com/github/fsprojects/Foogle.Charts/badge/pr)](http://issuestats.com/github/fsprojects/Foogle.Charts)
+
+Foogle Charts [![NuGet Status](http://img.shields.io/nuget/v/Foogle.Charts.svg?style=flat)](https://www.nuget.org/packages/Foogle.Charts/)
 =============
 
 Readme is coming soon!

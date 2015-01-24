@@ -3,6 +3,7 @@
 // ------------------------------------------------------------------------------------------------
 // Primitive chart types supported by Foogle
 // ------------------------------------------------------------------------------------------------
+open System
 
 type Chart =
   static member GeoChart(data:seq<string * #value>, ?Label, ?Region, ?DisplayMode) =
@@ -19,6 +20,12 @@ type Chart =
     { Data = Table.fromKeyValue Label data
       Options = Options.Empty
       Chart = PieChart { PieChart.PieHole = PieHole } }
+
+  static member Timeline(data:seq<string * string * DateTime * DateTime>, ?Labels, ?rowLabels, ?barLabels) =         
+    { Data = Table.from2Key2Values Labels data
+      Options = Options.Empty
+      Chart = Timeline { TimeLine.ShowRowLabels = rowLabels; TimeLine.ShowBarLabels = barLabels; }
+    }
 
 
 // ------------------------------------------------------------------------------------------------

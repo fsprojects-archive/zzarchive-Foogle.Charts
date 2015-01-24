@@ -44,6 +44,8 @@ let CreateHighchartsChart (chart:FoogleChart) =
           failwith "TODO: Do highcharts support geo?"
       | PieChart(p) ->
           yield! formatRecd "chart" ["type", JsonValue.String "pie"]
+      | Timeline(_) -> 
+          failwith "TODO: Do highcharts support timeline?"
 
       yield "series", JsonValue.Array [|
           JsonValue.Record [|

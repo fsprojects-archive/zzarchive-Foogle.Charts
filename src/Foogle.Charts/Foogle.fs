@@ -5,7 +5,7 @@
 // ------------------------------------------------------------------------------------------------
 
 /// Represents a value that can be passed as data point
-/// This can be any numeric type and vairous other .NET types
+/// This can be any numeric type and various other .NET types
 type value = System.IConvertible
 
 /// Represents a data source for the Foogle chart
@@ -62,7 +62,10 @@ type ColorAxis =
 
 /// Specifies the preferred rendering engine for the chart
 type Engine = 
+  /// use Google rendering engine
   | Google
+
+  /// use HighCharts rendering engine
   | Highcharts
 
 /// Specifies common options that are shared by all Foogle charts

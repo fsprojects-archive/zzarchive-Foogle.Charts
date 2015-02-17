@@ -20,13 +20,30 @@ let ``Can format simple table`` () =
       Rows = 
         [ [ "Germany"; 200 ]
           [ "France"; 300 ]
-          [ "United States"; 400 ] ] }
+          [ "United States"; 400] ] }
     |> Formatting.Common.formatTable
 
   let expected =
     JsonValue.Array
       [|JsonValue.Array [|JsonValue.String "Country"; JsonValue.String "Popularity "|];
         JsonValue.Array [|JsonValue.String "Germany"; JsonValue.Number 200M|];
+        JsonValue.Array [|JsonValue.String "France"; JsonValue.Number 300M|];
+        JsonValue.Array [|JsonValue.String "United States"; JsonValue.Number 400M|]|]
+  actual |> should equal expected
+
+[<Test>]
+let ``Can format simple table (ignore header)`` () =
+  let actual =
+    { Labels = [ ""; ""] 
+      Rows = 
+        [ [ "Germany"; 200 ]
+          [ "France"; 300 ]
+          [ "United States"; 400] ] }
+    |> Formatting.Common.formatTableData
+
+  let expected =
+    JsonValue.Array
+      [|JsonValue.Array [|JsonValue.String "Germany"; JsonValue.Number 200M|];
         JsonValue.Array [|JsonValue.String "France"; JsonValue.Number 300M|];
         JsonValue.Array [|JsonValue.String "United States"; JsonValue.Number 400M|]|]
   actual |> should equal expected

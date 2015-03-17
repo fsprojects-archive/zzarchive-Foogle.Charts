@@ -25,6 +25,12 @@ module internal Table =
     { Labels = "" :: (defaultArg labels [ "Value 1"; "Value 2" ])
       Rows = values |> Seq.map (fun (k, v1, v2) -> [box k; box v1; box v2]) }
 
+  let fromKeyNValues labels (values:seq<string * list<#value>>) = 
+    let count = values |> Seq.map (snd >> Seq.length) |> Seq.reduce (fun a b ->
+        if a <> b then failwith "Mismatching lengths!"
+        a)
+    { Labels = "" :: (defaultArg labels [ for i in 1 .. count -> sprintf "Value %d" i ])
+      Rows = values |> Seq.map (fun (k, vs) -> [yield box k; for v in vs do yield box v]) }
 
 // ------------------------------------------------------------------------------------------------
 // Foogle chart options
@@ -118,11 +124,16 @@ module PieChart =
       /// number times the radius of the chart.
       PieHole : float option }
 
+module LineChart = 
+  type CurveType = None | Function
+  type Options =
+    { CurveType : CurveType option }
 
 //// Specifies the chart kind and chart-specific options
 type ChartKind = 
   | GeoChart of GeoChart.Options
   | PieChart of PieChart.Options
+  | LineChart of LineChart.Options
 
 // ------------------------------------------------------------------------------------------------
 // Foogle chart data type - in the top-level namespace

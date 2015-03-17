@@ -28,8 +28,5 @@ fsi.AddPrinter(fun (chart:FoogleChart) ->
       File.WriteAllText(Path.Combine(tempDir, "index.html"), Google.GoogleChartHtml googleChart)
       printfn "GOOGLE: %s\n%s" tempDir (Google.GoogleChartHtml googleChart)
 
-  let form = new Form(Width=800, Height=500, Visible=true)
-  let web = new WebBrowser(Dock=DockStyle.Fill)
-  form.Controls.Add(web) 
-  web.Navigate("http://localhost:8081/index.html")
+  System.Diagnostics.Process.Start("http://localhost:8081/index.html") |> ignore
   "(Foogle Chart)" )

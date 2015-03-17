@@ -15,6 +15,7 @@ open System.Windows.Forms
 
 (** 
 Geo chart
+---------
 *)
 (*** define-output:geo1 ***)
 let pop =
@@ -53,6 +54,7 @@ Chart.GeoChart
 
 (**
 Pie charts
+----------
 *)
 (*** define-output:pie1 ***)
 let tasks = 
@@ -77,3 +79,19 @@ Chart.PieChart(tasks, Label="Hours per Day")
 |> Chart.WithTitle(Title = "Daily activities")
 |> Chart.WithOutput(Engine.Highcharts)
 (*** include-it:pie3 ***)
+
+(**
+Line charts
+-----------
+*)
+(*** define-output:line1 ***)
+let rnd = System.Random()
+let growth = [ for y in 2000 .. 2020 -> string y, rnd.Next(100) ]
+Chart.LineChart(growth, Label="Growth")
+(*** include-it:line1 ***)
+
+(*** define-output:line2 ***)
+let growths = [ for y in 2000 .. 2020 -> string y, [ rnd.Next(100); rnd.Next(100) ] ]
+Chart.LineChart(growths, Labels=["One Country"; "Other Country"])
+(*** include-it:line2 ***)
+

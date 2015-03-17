@@ -12,3 +12,6 @@
 
 #### 0.0.4 - August 13 2014
 * Add primitive Highcharts renderer for pie charts.
+
+#### 0.0.5 - March 17 2015
+* Add primitive support for line charts (Google only).

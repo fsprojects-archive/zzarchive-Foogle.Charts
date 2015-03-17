@@ -44,7 +44,9 @@ let CreateGoogleChart (chart:FoogleChart) =
           yield! formatDefUnionLo "displayMode" "auto" g.DisplayMode
       | PieChart(p) ->
           yield! formatOptNum "pieHole" p.PieHole
-      
+      | LineChart(p) ->
+          yield! formatDefUnionLo "curveType" "none" p.CurveType
+
       // Format common chart options
       let opts = chart.Options
       yield! formatOptStr "title" opts.Title

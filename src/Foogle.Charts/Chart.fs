@@ -20,6 +20,15 @@ type Chart =
       Options = Options.Empty
       Chart = PieChart { PieChart.PieHole = PieHole } }
 
+  static member LineChart(data:seq<string * #value>, ?Label, ?CurveType) =
+    { Data = Table.fromKeyValue Label data
+      Options = Options.Empty
+      Chart = LineChart { LineChart.CurveType = CurveType } }
+
+  static member LineChart(data:seq<string * list<#value>>, ?Labels, ?CurveType) =
+    { Data = Table.fromKeyNValues Labels data
+      Options = Options.Empty
+      Chart = LineChart { LineChart.CurveType = CurveType } }
 
 // ------------------------------------------------------------------------------------------------
 // Extensions that provide functional access to configuration via pipelining

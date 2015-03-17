@@ -57,8 +57,8 @@
             GeoChart(...)
           </code>
           <div class="tip" id="51">
-            <strong>Signature:</strong> (data:seq&lt;string * &#39;?38755 * &#39;?38756&gt; * Labels:string list option * Region:string option * DisplayMode:DisplayMode option) -&gt; FoogleChart<br />
-                          <strong>Type parameters:</strong> '?38755, '?38756          </div>
+            <strong>Signature:</strong> (data:seq&lt;string * &#39;?39998 * &#39;?39999&gt; * Labels:string list option * Region:string option * DisplayMode:DisplayMode option) -&gt; FoogleChart<br />
+                          <strong>Type parameters:</strong> '?39998, '?39999          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Chart.fs#L13-13" class="github-link">
@@ -75,8 +75,8 @@
             GeoChart(...)
           </code>
           <div class="tip" id="52">
-            <strong>Signature:</strong> (data:seq&lt;string * &#39;?38753&gt; * Label:string option * Region:string option * DisplayMode:DisplayMode option) -&gt; FoogleChart<br />
-                          <strong>Type parameters:</strong> '?38753          </div>
+            <strong>Signature:</strong> (data:seq&lt;string * &#39;?39996&gt; * Label:string option * Region:string option * DisplayMode:DisplayMode option) -&gt; FoogleChart<br />
+                          <strong>Type parameters:</strong> '?39996          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Chart.fs#L8-8" class="github-link">
@@ -90,11 +90,47 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '53', 53)" onmouseover="showTip(event, '53', 53)">
-            PieChart(data, Label, PieHole)
+            LineChart(data, Labels, CurveType)
           </code>
           <div class="tip" id="53">
-            <strong>Signature:</strong> (data:seq&lt;string * &#39;?38758&gt; * Label:string option * PieHole:float option) -&gt; FoogleChart<br />
-                          <strong>Type parameters:</strong> '?38758          </div>
+            <strong>Signature:</strong> (data:seq&lt;string * &#39;?40005 list&gt; * Labels:string list option * CurveType:CurveType option) -&gt; FoogleChart<br />
+                          <strong>Type parameters:</strong> '?40005          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Chart.fs#L28-28" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '54', 54)" onmouseover="showTip(event, '54', 54)">
+            LineChart(data, Label, CurveType)
+          </code>
+          <div class="tip" id="54">
+            <strong>Signature:</strong> (data:seq&lt;string * &#39;?40003&gt; * Label:string option * CurveType:CurveType option) -&gt; FoogleChart<br />
+                          <strong>Type parameters:</strong> '?40003          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Chart.fs#L23-23" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '55', 55)" onmouseover="showTip(event, '55', 55)">
+            PieChart(data, Label, PieHole)
+          </code>
+          <div class="tip" id="55">
+            <strong>Signature:</strong> (data:seq&lt;string * &#39;?40001&gt; * Label:string option * PieHole:float option) -&gt; FoogleChart<br />
+                          <strong>Type parameters:</strong> '?40001          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Chart.fs#L18-18" class="github-link">
@@ -107,15 +143,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '54', 54)" onmouseover="showTip(event, '54', 54)">
+          <code onmouseout="hideTip(event, '56', 56)" onmouseover="showTip(event, '56', 56)">
             WithColorAxis(...)
           </code>
-          <div class="tip" id="54">
+          <div class="tip" id="56">
             <strong>Signature:</strong> (MinValue:float option * MaxValue:float option * Values:seq&lt;float&gt; option * Colors:seq&lt;Color&gt; option) -&gt; FoogleChart -&gt; FoogleChart<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Chart.fs#L62-62" class="github-link">
+            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Chart.fs#L71-71" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -146,15 +182,15 @@ value, and the last color as the highest.</li>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '55', 55)" onmouseover="showTip(event, '55', 55)">
+          <code onmouseout="hideTip(event, '57', 57)" onmouseover="showTip(event, '57', 57)">
             WithOutput(Engine)
           </code>
-          <div class="tip" id="55">
+          <div class="tip" id="57">
             <strong>Signature:</strong> (Engine:Engine option) -&gt; FoogleChart -&gt; FoogleChart<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Chart.fs#L37-37" class="github-link">
+            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Chart.fs#L46-46" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -164,15 +200,15 @@ value, and the last color as the highest.</li>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '56', 56)" onmouseover="showTip(event, '56', 56)">
+          <code onmouseout="hideTip(event, '58', 58)" onmouseover="showTip(event, '58', 58)">
             WithPie(PieHole)
           </code>
-          <div class="tip" id="56">
+          <div class="tip" id="58">
             <strong>Signature:</strong> (PieHole:float option) -&gt; FoogleChart -&gt; FoogleChart<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Chart.fs#L33-33" class="github-link">
+            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Chart.fs#L42-42" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -182,15 +218,15 @@ value, and the last color as the highest.</li>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '57', 57)" onmouseover="showTip(event, '57', 57)">
+          <code onmouseout="hideTip(event, '59', 59)" onmouseover="showTip(event, '59', 59)">
             WithTitle(Title)
           </code>
-          <div class="tip" id="57">
+          <div class="tip" id="59">
             <strong>Signature:</strong> (Title:string option) -&gt; FoogleChart -&gt; FoogleChart<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Chart.fs#L29-29" class="github-link">
+            <a href="http://github.com/fsprojects/Foogle.Charts/tree/master/src/Foogle.Charts/Chart.fs#L38-38" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -210,7 +246,7 @@ value, and the last color as the highest.</li>
             <li class="nav-header">Foogle Charts</li>
             <li><a href="/Foogle.Charts/index.html">Home page</a></li>
             <li class="divider"></li>
-            <li><a href="http://nuget.com/packages/Foogle.Charts">Get Library via NuGet</a></li>
+            <li><a href="http://nuget.org/packages/Foogle.Charts">Get Library via NuGet</a></li>
             <li><a href="http://github.com/fsprojects/Foogle.Charts">Source Code on GitHub</a></li>
             <li><a href="http://github.com/fsprojects/Foogle.Charts/blob/master/LICENSE.txt">License</a></li>
             <li><a href="http://github.com/fsprojects/Foogle.Charts/blob/master/RELEASE_NOTES.md">Release Notes</a></li>

@@ -61,7 +61,7 @@
 </tr>
 </table>
 
-<p>Geo chart</p>
+<h2>Geo chart</h2>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
 <span class="l">1: </span>
@@ -177,7 +177,7 @@ var chart = new google.visualization.GeoChart(document.getElementById('foogle_4'
 chart.draw(data, options);
 });</script><div id="foogle_4" style="height:400px; margin:0px 45px 0px 25px"></div>
 
-<p>Pie charts</p>
+<h2>Pie charts</h2>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
 <span class="l">1: </span>
@@ -281,12 +281,78 @@ chart.draw(data, options);
                 });
               </script>
 
+<h2>Line charts</h2>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs20', 45)" onmouseover="showTip(event, 'fs20', 45)" class="i">rnd</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs2', 46)" onmouseover="showTip(event, 'fs2', 46)" class="i">System</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs21', 47)" onmouseover="showTip(event, 'fs21', 47)" class="i">Random</span>()
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs22', 48)" onmouseover="showTip(event, 'fs22', 48)" class="i">growth</span> <span class="o">=</span> [ <span class="k">for</span> <span onmouseout="hideTip(event, 'fs23', 49)" onmouseover="showTip(event, 'fs23', 49)" class="i">y</span> <span class="k">in</span> <span class="n">2000</span> <span class="o">..</span> <span class="n">2020</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs24', 50)" onmouseover="showTip(event, 'fs24', 50)" class="i">string</span> <span onmouseout="hideTip(event, 'fs23', 51)" onmouseover="showTip(event, 'fs23', 51)" class="i">y</span>, <span onmouseout="hideTip(event, 'fs20', 52)" onmouseover="showTip(event, 'fs20', 52)" class="i">rnd</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs25', 53)" onmouseover="showTip(event, 'fs25', 53)" class="i">Next</span>(<span class="n">100</span>) ]
+<span onmouseout="hideTip(event, 'fs6', 54)" onmouseover="showTip(event, 'fs6', 54)" class="i">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs26', 55)" onmouseover="showTip(event, 'fs26', 55)" class="i">LineChart</span>(<span onmouseout="hideTip(event, 'fs22', 56)" onmouseover="showTip(event, 'fs22', 56)" class="i">growth</span>, <span onmouseout="hideTip(event, 'fs8', 57)" onmouseover="showTip(event, 'fs8', 57)" class="i">Label</span><span class="o">=</span><span class="s">&quot;</span><span class="s">Growth</span><span class="s">&quot;</span>)</pre>
+</td>
+</tr>
+</table>
+
+
+              <script type="text/javascript">
+                if (typeof foogleCharts === 'undefined') {
+                  var foogleCharts = [];
+                  function foogleInit() {
+                    for (var i = 0; i < foogleCharts.length; i++) {
+                      foogleCharts[i]();
+                    }
+                  }
+                  google.load('visualization', '1', { 'packages': ['corechart','geochart'] });
+                  google.setOnLoadCallback(foogleInit);
+                }
+              </script><script type="text/javascript">foogleCharts.push(function() {
+var data = google.visualization.arrayToDataTable([["","Growth"],["2000",91],["2001",75],["2002",91],["2003",59],["2004",49],["2005",60],["2006",74],["2007",88],["2008",71],["2009",76],["2010",85],["2011",40],["2012",67],["2013",0],["2014",3],["2015",73],["2016",61],["2017",2],["2018",78],["2019",17],["2020",68]]);
+var options = {"curveType":"none"};
+var chart = new google.visualization.LineChart(document.getElementById('foogle_8'));
+chart.draw(data, options);
+});</script><div id="foogle_8" style="height:400px; margin:0px 45px 0px 25px"></div>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+<span class="l">2: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs27', 58)" onmouseover="showTip(event, 'fs27', 58)" class="i">growths</span> <span class="o">=</span> [ <span class="k">for</span> <span onmouseout="hideTip(event, 'fs23', 59)" onmouseover="showTip(event, 'fs23', 59)" class="i">y</span> <span class="k">in</span> <span class="n">2000</span> <span class="o">..</span> <span class="n">2020</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs24', 60)" onmouseover="showTip(event, 'fs24', 60)" class="i">string</span> <span onmouseout="hideTip(event, 'fs23', 61)" onmouseover="showTip(event, 'fs23', 61)" class="i">y</span>, [ <span onmouseout="hideTip(event, 'fs20', 62)" onmouseover="showTip(event, 'fs20', 62)" class="i">rnd</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs25', 63)" onmouseover="showTip(event, 'fs25', 63)" class="i">Next</span>(<span class="n">100</span>); <span onmouseout="hideTip(event, 'fs20', 64)" onmouseover="showTip(event, 'fs20', 64)" class="i">rnd</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs25', 65)" onmouseover="showTip(event, 'fs25', 65)" class="i">Next</span>(<span class="n">100</span>) ] ]
+<span onmouseout="hideTip(event, 'fs6', 66)" onmouseover="showTip(event, 'fs6', 66)" class="i">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs26', 67)" onmouseover="showTip(event, 'fs26', 67)" class="i">LineChart</span>(<span onmouseout="hideTip(event, 'fs27', 68)" onmouseover="showTip(event, 'fs27', 68)" class="i">growths</span>, <span class="i">Labels</span><span class="o">=</span>[<span class="s">&quot;</span><span class="s">One</span><span class="s"> </span><span class="s">Country</span><span class="s">&quot;</span>; <span class="s">&quot;</span><span class="s">Other</span><span class="s"> </span><span class="s">Country</span><span class="s">&quot;</span>])</pre>
+</td>
+</tr>
+</table>
+
+
+              <script type="text/javascript">
+                if (typeof foogleCharts === 'undefined') {
+                  var foogleCharts = [];
+                  function foogleInit() {
+                    for (var i = 0; i < foogleCharts.length; i++) {
+                      foogleCharts[i]();
+                    }
+                  }
+                  google.load('visualization', '1', { 'packages': ['corechart','geochart'] });
+                  google.setOnLoadCallback(foogleInit);
+                }
+              </script><script type="text/javascript">foogleCharts.push(function() {
+var data = google.visualization.arrayToDataTable([["","One Country","Other Country"],["2000",86,6],["2001",10,42],["2002",61,8],["2003",92,25],["2004",9,52],["2005",87,30],["2006",36,40],["2007",40,45],["2008",98,91],["2009",85,41],["2010",70,2],["2011",59,18],["2012",49,25],["2013",72,41],["2014",64,66],["2015",84,90],["2016",52,80],["2017",5,69],["2018",81,17],["2019",87,52],["2020",81,63]]);
+var options = {"curveType":"none"};
+var chart = new google.visualization.LineChart(document.getElementById('foogle_9'));
+chart.draw(data, options);
+});</script><div id="foogle_9" style="height:400px; margin:0px 45px 0px 25px"></div>
+
 <div class="tip" id="fs1">namespace Foogle</div>
 <div class="tip" id="fs2">namespace System</div>
 <div class="tip" id="fs3">namespace System.Windows</div>
 <div class="tip" id="fs4">namespace System.Windows.Forms</div>
 <div class="tip" id="fs5">val pop : (string * int) list<br /><br />Full name: Tutorial.pop</div>
-<div class="tip" id="fs6">type Chart =<br />&#160;&#160;static member GeoChart : data:seq&lt;string * #value * #value&gt; * ?Labels:string list * ?Region:string * ?DisplayMode:DisplayMode -&gt; FoogleChart<br />&#160;&#160;static member GeoChart : data:seq&lt;string * #value&gt; * ?Label:string * ?Region:string * ?DisplayMode:DisplayMode -&gt; FoogleChart<br />&#160;&#160;static member PieChart : data:seq&lt;string * #value&gt; * ?Label:string * ?PieHole:float -&gt; FoogleChart<br />&#160;&#160;static member WithColorAxis : ?MinValue:float * ?MaxValue:float * ?Values:seq&lt;float&gt; * ?Colors:seq&lt;Color&gt; -&gt; (FoogleChart -&gt; FoogleChart)<br />&#160;&#160;static member WithOutput : ?Engine:Engine -&gt; (FoogleChart -&gt; FoogleChart)<br />&#160;&#160;static member WithPie : ?PieHole:float -&gt; (FoogleChart -&gt; FoogleChart)<br />&#160;&#160;static member WithTitle : ?Title:string -&gt; (FoogleChart -&gt; FoogleChart)<br /><br />Full name: Foogle.Chart</div>
+<div class="tip" id="fs6">type Chart =<br />&#160;&#160;static member GeoChart : data:seq&lt;string * #value * #value&gt; * ?Labels:string list * ?Region:string * ?DisplayMode:DisplayMode -&gt; FoogleChart<br />&#160;&#160;static member GeoChart : data:seq&lt;string * #value&gt; * ?Label:string * ?Region:string * ?DisplayMode:DisplayMode -&gt; FoogleChart<br />&#160;&#160;static member LineChart : data:seq&lt;string * #value list&gt; * ?Labels:string list * ?CurveType:CurveType -&gt; FoogleChart<br />&#160;&#160;static member LineChart : data:seq&lt;string * #value&gt; * ?Label:string * ?CurveType:CurveType -&gt; FoogleChart<br />&#160;&#160;static member PieChart : data:seq&lt;string * #value&gt; * ?Label:string * ?PieHole:float -&gt; FoogleChart<br />&#160;&#160;static member WithColorAxis : ?MinValue:float * ?MaxValue:float * ?Values:seq&lt;float&gt; * ?Colors:seq&lt;Color&gt; -&gt; (FoogleChart -&gt; FoogleChart)<br />&#160;&#160;static member WithOutput : ?Engine:Engine -&gt; (FoogleChart -&gt; FoogleChart)<br />&#160;&#160;static member WithPie : ?PieHole:float -&gt; (FoogleChart -&gt; FoogleChart)<br />&#160;&#160;static member WithTitle : ?Title:string -&gt; (FoogleChart -&gt; FoogleChart)<br /><br />Full name: Foogle.Chart</div>
 <div class="tip" id="fs7">static member Chart.GeoChart : data:seq&lt;string * #value * #value&gt; * ?Labels:string list * ?Region:string * ?DisplayMode:GeoChart.DisplayMode -&gt; FoogleChart<br />static member Chart.GeoChart : data:seq&lt;string * #value&gt; * ?Label:string * ?Region:string * ?DisplayMode:GeoChart.DisplayMode -&gt; FoogleChart</div>
 <div class="tip" id="fs8">Multiple items<br />type Label =<br />&#160;&#160;inherit Control<br />&#160;&#160;new : unit -&gt; Label<br />&#160;&#160;member AutoEllipsis : bool with get, set<br />&#160;&#160;member AutoSize : bool with get, set<br />&#160;&#160;member BackgroundImage : Image with get, set<br />&#160;&#160;member BackgroundImageLayout : ImageLayout with get, set<br />&#160;&#160;member BorderStyle : BorderStyle with get, set<br />&#160;&#160;member FlatStyle : FlatStyle with get, set<br />&#160;&#160;member GetPreferredSize : proposedSize:Size -&gt; Size<br />&#160;&#160;member Image : Image with get, set<br />&#160;&#160;member ImageAlign : ContentAlignment with get, set<br />&#160;&#160;...<br /><br />Full name: System.Windows.Forms.Label<br /><br />--------------------<br />Label() : unit</div>
 <div class="tip" id="fs9">val cities : (string * int * float) list<br /><br />Full name: Tutorial.cities</div>
@@ -300,6 +366,14 @@ chart.draw(data, options);
 <div class="tip" id="fs17">static member Chart.WithOutput : ?Engine:Engine -&gt; (FoogleChart -&gt; FoogleChart)</div>
 <div class="tip" id="fs18">type Engine =<br />&#160;&#160;| Google<br />&#160;&#160;| Highcharts<br /><br />Full name: Foogle.Engine</div>
 <div class="tip" id="fs19">union case Engine.Highcharts: Engine</div>
+<div class="tip" id="fs20">val rnd : System.Random<br /><br />Full name: Tutorial.rnd</div>
+<div class="tip" id="fs21">Multiple items<br />type Random =<br />&#160;&#160;new : unit -&gt; Random + 1 overload<br />&#160;&#160;member Next : unit -&gt; int + 2 overloads<br />&#160;&#160;member NextBytes : buffer:byte[] -&gt; unit<br />&#160;&#160;member NextDouble : unit -&gt; float<br /><br />Full name: System.Random<br /><br />--------------------<br />System.Random() : unit<br />System.Random(Seed: int) : unit</div>
+<div class="tip" id="fs22">val growth : (string * int) list<br /><br />Full name: Tutorial.growth</div>
+<div class="tip" id="fs23">val y : int</div>
+<div class="tip" id="fs24">Multiple items<br />val string : value:&#39;T -&gt; string<br /><br />Full name: Microsoft.FSharp.Core.Operators.string<br /><br />--------------------<br />type string = System.String<br /><br />Full name: Microsoft.FSharp.Core.string</div>
+<div class="tip" id="fs25">System.Random.Next() : int<br />System.Random.Next(maxValue: int) : int<br />System.Random.Next(minValue: int, maxValue: int) : int</div>
+<div class="tip" id="fs26">static member Chart.LineChart : data:seq&lt;string * #value list&gt; * ?Labels:string list * ?CurveType:LineChart.CurveType -&gt; FoogleChart<br />static member Chart.LineChart : data:seq&lt;string * #value&gt; * ?Label:string * ?CurveType:LineChart.CurveType -&gt; FoogleChart</div>
+<div class="tip" id="fs27">val growths : (string * int list) list<br /><br />Full name: Tutorial.growths</div>
 
         </div>
         <div class="span3">
@@ -311,7 +385,7 @@ chart.draw(data, options);
             <li class="nav-header">Foogle Charts</li>
             <li><a href="/Foogle.Charts/index.html">Home page</a></li>
             <li class="divider"></li>
-            <li><a href="http://nuget.com/packages/Foogle.Charts">Get Library via NuGet</a></li>
+            <li><a href="http://nuget.org/packages/Foogle.Charts">Get Library via NuGet</a></li>
             <li><a href="http://github.com/fsprojects/Foogle.Charts">Source Code on GitHub</a></li>
             <li><a href="http://github.com/fsprojects/Foogle.Charts/blob/master/LICENSE.txt">License</a></li>
             <li><a href="http://github.com/fsprojects/Foogle.Charts/blob/master/RELEASE_NOTES.md">Release Notes</a></li>

@@ -1,13 +1,4 @@
-[![Issue Stats](http://issuestats.com/github/fsprojects/Foogle.Charts/badge/issue)](http://issuestats.com/github/fsprojects/Foogle.Charts)
-[![Issue Stats](http://issuestats.com/github/fsprojects/Foogle.Charts/badge/pr)](http://issuestats.com/github/fsprojects/Foogle.Charts)
+[ARCHIVED] Foogle Charts
+========================
 
-Foogle Charts [![NuGet Status](http://img.shields.io/nuget/v/Foogle.Charts.svg?style=flat)](https://www.nuget.org/packages/Foogle.Charts/)
-=============
-
-Readme is coming soon!
-
-### Maintainer(s)
-
-- We are seeking a primary active maintainer for this stable repo. Please record your interest by [adding an admin issue](https://github.com/fsprojects/FsProjectsAdmin/issues)
-
-The default maintainer account for projects under "fsprojects" is [@fsgit](https://github.com/fsgit) - F# Community Project Incubation Space (repo management)
+The project is no longer maintained. For a more complete HTML5 visualization library that wraps Google Charts (but also Plotly), please see [XPlot](https://github.com/TahaHachana/XPlot). The Foogle.Charts project will be deleted at some point.
